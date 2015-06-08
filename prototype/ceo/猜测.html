@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>猜测</title>
+		<link  rel="stylesheet" href="static/css/business.css"/>
+		<script src="static/js/jquery-2.0.3.js"></script>
+		<script src="static/js/iscroll.js"></script>
+		<script src="static/js/init.js"></script>
+		<script src="static/js/business/guess.js"></script>
+		<script src="static/js/util.js"></script>
+	</head>
+	<body class="guess">
+		<div class="main layout">
+			<div class="infos">
+				<div class="imgBox">
+					<img src="static/img/temp/p1.jpg">	
+				</div>
+				<b class="title">猜猜你们的暗号</b>
+				<div class="okTip"><span></span>恭喜，您猜中了暗号<del></del></div>
+				<div class="chance">您还有 <span class="red">3</span> 次机会</div>
+				<div class="chance">您还有 <span class="red">3</span> 次机会 提示:<span class="green">比123大</span></div>
+				<div class="chance">您已经没有机会了，快邀请好友帮猜吧~</div>
+				<!-- 约会失败 begin 3 -->
+				<b class="title">很遗憾，您未能约到马化腾</b>
+				<div class="chance">您可以继续约其它CEO</div>
+				<!-- 约会失败 end 3 -->
+				<!-- 已被约 begin 4 -->
+				<b class="title">已被约</b>
+				<div class="chance">很遗憾您来晚了</div>
+				<!-- 已被约 end 4 -->
+			</div>
+			<!--猜测结果 成功.success;失败.fail-->
+			<div class="result success">
+				<!-- 猜中号码文案提示 begin 1-->
+				<p>我们将从猜中暗号的用户中抽选出幸</p>
+				<p>运用户与CEO一起运动</p>
+				<p class="note">敬请等候通知</p>
+				<!-- 猜中号码文案提示 end 1-->
+				<!-- 约会成功文案提示 begin 2-->
+				<p>你们接头的时间地点</p>
+				<div class="note">
+					6月22日 18:00<br />
+					深圳大学体育场 跑步
+				</div>
+				<!-- 约会成功文案提示 begin 2-->
+			</div>
+			<!--游戏区-->
+			<div class="game">
+				<div class="pad">
+					<div class="content hBox">
+						<div class="flex1"></div>
+						<div class="guessNum" id='num1'>
+							<div class="iscrollC"></div>
+						</div>
+						<div class="flex1"></div>
+						<div class="guessNum" id='num2'>
+							<div class="iscrollC"></div>
+						</div>
+						<div class="flex1"></div>
+						<div class="guessNum" id='num3'>
+							<div class="iscrollC"></div>
+						</div>
+						<div class="flex1"></div>
+					</div>
+					<div class="desc">请选择数字 </div>
+				</div>
+			</div>	
+			<!--联系方式-->
+			<div class="contact">
+				<div class="imgBox">
+					<img src="static/img/temp/p1.jpg">	
+				</div>
+				<div class="contactTitle">您的联系方式</div>
+				<input type="text" placeholder="请留下您的联系手机号" />
+				<div class="txtC">
+					<input type="text" placeholder="请输入短信验证码" maxlength="11"/>
+					<div class="btnMark">获取验证码</div>
+				</div>
+			</div>
+			<!-- 按钮组 -->
+			<div class="btnC">
+				<div class="btnGuess" id='btnGuess'>1元,开始猜</div>
+				<div class="invite">
+					<p>邀请好友免费帮猜</p>
+					<div class="btn green">邀请好友</div>
+				</div>
+				<div class="btn green">分享活动</div>
+				<div class="btn red">约其它CEO</div>
+				
+			</div>
+			<dl class="hisInfo">
+				<dt>暗号猜测记录</dt>
+				<dd>
+					<ul class="clearfix">
+						<li class="c1">
+							<img src="static/img/temp/tx2.png" alt="">
+							<b>Janet</b>
+						</li>
+						<li class="c2">
+							猜了123
+						</li>
+						<li class="c3">
+							暗号比123大
+						</li>
+						<li class="c4">
+							06-02 10:50
+						</li>
+						<li class="c5">
+							已帮猜
+						</li>
+					</ul>
+					<ul class="clearfix">
+						<li class="c1">
+							<img src="static/img/temp/tx2.png" alt="">
+							<b>Janet</b>
+						</li>
+						<li class="c2">
+							猜了123
+						</li>
+						<li class="c3">
+							暗号比123大
+						</li>
+						<li class="c4">
+							06-02 10:50
+						</li>
+						<li class="c5">
+							已帮猜
+						</li>
+					</ul>
+					<ul class="clearfix">
+						<li class="c1">
+							<img src="static/img/temp/tx2.png" alt="">
+							<b>Janet</b>
+						</li>
+						<li class="c2">
+							猜了123
+						</li>
+						<li class="c3">
+							猜中了
+						</li>
+						<li class="c4">
+							06-02 10:50
+						</li>
+						<li class="c5">
+							已帮猜
+						</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>	
+	</body>
+</html>
