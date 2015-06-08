@@ -7,15 +7,34 @@
 		<script src="static/js/jquery-2.0.3.js"></script>
 		<script src="static/js/iscroll.js"></script>
 		<script src="static/js/init.js"></script>
+		<script src="static/js/business/common.js"></script>
 		<script src="static/js/business/guess.js"></script>
 		<script src="static/js/util.js"></script>
 	</head>
 	<body class="guess">
+		
+		<div style="z-index: 1000;  position: fixed; width: 100px; height: 50px; left: 100px; top: 100px;background: wheat;" onclick="window.location=''">refresh</div>
+		
 		<div class="main layout">
+			<div id='btnRule' class="btnRule">活动规则</div>
 			<div class="infos">
-				<div class="imgBox">
-					<img src="static/img/temp/p1.jpg">	
+				<div class="pic2">
+					<div class="imgBox">
+						<img src="static/img/temp/p1.jpg">	
+					</div>
 				</div>
+				<!--双头像,第二张图片加.p2 begin 5-->
+				<div class="pic2">
+					<div class="imgBox">
+						<img src="static/img/temp/p1.jpg">	
+					</div>
+					<div class="imgBox p2">
+						<img src="static/img/temp/p2.jpg">	
+					</div>	
+				</div>
+				<!--双头像 end 5-->
+				
+				<div class="help">帮Janet猜暗号,约上CEO一起去运动</div>
 				<b class="title">猜猜你们的暗号</b>
 				<div class="okTip"><span></span>恭喜，您猜中了暗号<del></del></div>
 				<div class="chance">您还有 <span class="red">3</span> 次机会</div>
@@ -148,6 +167,29 @@
 					</ul>
 				</dd>
 			</dl>
+		</div>	
+		<!--活动说明-->
+		<div id="actDesc" class="actDesc vbox">
+			<div class="title">活动说明</div>
+			<div class="layout content flex1">
+				<p>一、网厅签到有惊喜</p>
+				<p>活动时间：2012年4月28日至年6月30日</p>
+				<p>活动对象：北京移动客户</p>
+				<p>活动内容：活动期间， 您登录北京移动门户网站"春游网厅"活动页面并点击领取，即可获赠相应优惠券。</p>
+				<p>优惠券发放：优惠券将于您参与活动的次月10日前以短或彩信的方式发送到您手机上。</p>
+				<p>优惠券说明：</p>
+				<p>4月份参与领取优惠券的客户，凭优惠券到店，可享受在北京地区季诺意式休闲餐厅（当代、西直门华堂店）以9寸匹萨的超值价格（49元）尊享13寸超大双拼匹萨一份。本优惠券仅限兑换优惠使用资格。本优惠在2012年3月19日至5月31日（4月29日-5月1日除外）前使用，过期作废。5、6月份参与领取优惠券的客户，凭优惠券到店，可享受在北京地区6家大成家以49元的价格享受原价72元的大成家招牌碳烤鸡腿饭双人餐。此活动需至少两人同行参与。本优惠券仅限兑换优惠使用资格。本优惠在2012年4月23日至7月31日（4月29日-5月1日除外）前使用，过期作废。</p>
+			</div>
+			<div id="btnClose" class='btnClose'></div>
+		</div>
+		<!--帮别人猜，结果浮层,.success:成功;.fail:失败 -->
+		<div id="floatRet" class="success shadowDiv centerC">
+			<div class="content">
+				<p>很遗憾您没有猜中暗号</p>
+				<div class="btn">
+					确定
+				</div>
+			</div>	
 		</div>	
 	</body>
 </html>

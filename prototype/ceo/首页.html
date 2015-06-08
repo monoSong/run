@@ -6,14 +6,18 @@
 		<link  rel="stylesheet" href="static/css/business.css"/>
 		<script src="static/js/jquery-2.0.3.js"></script>
 		<script src="static/js/init.js"></script>
+		<script src="static/js/business/common.js"></script>
 		<script src="static/js/business/index.js"></script>
 		<script src="static/js/util.js"></script>
 	</head>
 	<body class="index">
+		
+		<div style="position: fixed; width: 100px; height: 50px; left: 100px; top: 100px;background: wheat;" onclick="window.location=''">refresh</div>
+		
 		<div class="main">
 			<div class="logo"></div>
 			<div id='btnRule' class="btnRule">活动规则</div>
-			<img src="static/img/actLogo.png" /> 
+			<img src="static/img/actLogo.png" id='actLogo' onload="$(this).attr('loaded',true);renderPage()"/> 
 			
 			<ul class="list clearfix" id='listC'>
 				<li class="item">
@@ -91,10 +95,10 @@
 			<p>下载初练APP</p>
 		</div>
 		<!--CEO信息浮层 -->
-		<div id='floatCEO' class="hide shadowDiv centerC">
-			<div class="floatUser">
+		<div id='floatCEO' class="shadowDiv centerC">
+			<div class="floatUser" id='floatUser'>
 				<div id='float_btnClose' class="btnClose"></div>
-				<div class="content" style=" height1: 7rem; width:5rem;">
+				<div class="content" >
 					<div class="infos">
 						<div class="imgBox">
 							<img src="static/img/temp/p1.jpg">	
