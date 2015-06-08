@@ -479,6 +479,9 @@ img {
     padding: .26rem .72rem;
     margin-top: .2rem;
     position: relative; }
+    .guess .game.lighting .lightCover {
+      background: -webkit-radial-gradient(circle, #000, transparent, transparent);
+      -webkit-animation: lighting 800ms linear infinite alternate; }
     .guess .game:before, .guess .game:after {
       content: '';
       background: url(../img/light.png);
@@ -491,6 +494,17 @@ img {
     .guess .game:after {
       right: .1rem;
       left: auto; }
+    .guess .game .lightCover {
+      z-index: 1000;
+      width: .6rem;
+      height: .6rem;
+      border-radius: 50%;
+      position: absolute;
+      left: .1rem;
+      top: 1rem; }
+      .guess .game .lightCover.right {
+        right: .1rem;
+        left: auto; }
     .guess .game .pad {
       padding: .3rem;
       background: #e74c3c;
@@ -656,5 +670,14 @@ img {
     -webkit-transform: scale(3);
     opacity: 0;
     -webkit-filter: blur(2px); } }
+@-webkit-keyframes lighting {
+  0% {
+    box-shadow1: 0 0 30px 3px red inset;
+    opacity: 0;
+    -webkit-transform: scale(1); }
+  100% {
+    box-shadow: 0 0 0 0;
+    opacity: .7;
+    -webkit-transform: scale(1.3); } }
 
 /*# sourceMappingURL=business.css.map */

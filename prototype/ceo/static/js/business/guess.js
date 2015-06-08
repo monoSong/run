@@ -1,6 +1,7 @@
 'use strict';
 
 (function() {
+	var  i1,i2,i3;
 	$(function() {
 		init();
 		bindEvents();
@@ -11,34 +12,52 @@
 		var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 		var numHtml = '<div>' + arr.join('</div><div>') + '</div>';
 		$('.iscrollC').html(numHtml);
-	}
-
-	function bindEvents() {
 		/*密码锁*/
 		var options={
 			snap: true
 		}
-		var a = new IScroll('#num1', options);
-		new IScroll('#num2', options);
-		new IScroll('#num3', options);
-		
-		$("#btnGuess").click(function(){
-			var guessNum = getGuessNum();
-			alert(guessNum);
+		i1 = new IScroll('#num1', options);
+		i2 = new IScroll('#num2', options);
+		i3 = new IScroll('#num3', options);
+		i1.on('scrollStart',function(){
+			$("#game").addClass('lighting');
+		});
+		i2.on('scrollStart',function(){
+			$("#game").addClass('lighting');
+		});
+		i3.on('scrollStart',function(){
+			$("#game").addClass('lighting');
+		});
+		i1.on('scrollEnd',function(){
+			$("#game").removeClass('lighting');
+		});
+		i2.on('scrollEnd',function(){
+			$("#game").removeClass('lighting');
+		});
+		i3.on('scrollEnd',function(){
+			$("#game").removeClass('lighting');
 		});
 	}
-	
+
+	function bindEvents() {
+		$("#btnGuess").click(function(){
+			var guessNum = getGuessNum();
+		});
+		
+	}
+	/**
+	 * 功能：获取猜测数字
+	 */
 	function getGuessNum(){
-		var num1=_getV($('#num1 .iscrollC'));
-		var num2=_getV($('#num2 .iscrollC'));
-		var num3=_getV($('#num3 .iscrollC'));
+		var num1=_getV(i1.y);
+		var num2=_getV(i2.y);
+		var num3=_getV(i3.y);
+		var ret  = num1+''+num2+num3;
+		return ret;
 	}
 	
-	function _getV($dom){
-		var rawStr=$dom.css('transform');
-		var dot=rawStr.lastIndexOf(',');
-		var rawStr=rawStr.substring(dot);
-		var value =rawStr.match(/(\d)+/)[0]/76;
-		return vaule;
+	function _getV(offsetVule){
+		var value =Math.abs(offsetVule/76);
+		return value;
 	}
 })();

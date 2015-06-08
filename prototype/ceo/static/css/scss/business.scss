@@ -466,6 +466,14 @@ img{vertical-align:top;pointer-events: none;width: 100%;}
         padding: .26rem .72rem;
         margin-top: .2rem;
         position:relative; 
+        
+        &.lighting{
+            .lightCover{
+                background:-webkit-radial-gradient(circle,#000,transparent,transparent);
+                @include pre(animation,lighting 800ms linear infinite alternate);
+            }
+        }
+        
         &:before,&:after{
             content:'';
             background:url(../img/light.png);
@@ -480,6 +488,21 @@ img{vertical-align:top;pointer-events: none;width: 100%;}
             right:.1rem;
             left:auto;
         }
+        
+        .lightCover{
+            z-index: 1000;
+            width: .6rem;
+            height: .6rem;
+            border-radius: 50%;
+            position: absolute;
+            left:.1rem;
+            top:1rem;
+            &.right{
+                right:.1rem;
+                left:auto;
+            }
+        }
+        
         .pad{
             padding: .3rem;
             background: #e74c3c;
@@ -637,4 +660,9 @@ img{vertical-align:top;pointer-events: none;width: 100%;}
 
 @-webkit-keyframes fadeOut{
     100%{-webkit-transform:scale(3);opacity: 0;-webkit-filter: blur(2px);}
+}
+
+@-webkit-keyframes lighting{
+    0%{ box-shadow1: 0 0 30px 3px red inset;opacity: 0;-webkit-transform:scale(1);}
+    100%{ box-shadow: 0 0 0 0;opacity: .7;-webkit-transform:scale(1.3);}
 }
