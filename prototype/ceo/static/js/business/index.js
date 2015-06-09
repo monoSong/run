@@ -49,5 +49,12 @@ function renderPage(){
 				$("#floatCEO").css('display', '-webkit-box');
 			},400);
 		})
+		
+		$("#btnKonow").click(function(){
+			$("#guide").addClass('hideState');
+			setTimeout(function(){
+				$("#guide").hide();
+			},1000);
+		});
 	}
 })();
