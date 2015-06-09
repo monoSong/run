@@ -376,10 +376,10 @@ img{vertical-align:top;pointer-events: none;width: 100%;}
                 @include pre(animation,guideShow1 600ms cubic-bezier(0, 0.74, 0.24, 0.99) 1 forwards);
             }
             .hand{
-                @include pre(animation,guideShow2 800ms cubic-bezier(0, 0.74, 0.24, 0.99) 1 forwards 300ms);
+                @include pre(animation,guideShow2 800ms cubic-bezier(0, 0.74, 0.24, 0.99) 1 forwards 900ms);
             }
             .op{
-                @include pre(animation,guideShow3 300ms cubic-bezier(0, 0.74, 0.24, 0.99) 1 forwards 800ms);
+                @include pre(animation,guideShow3 300ms cubic-bezier(0, 0.74, 0.24, 0.99) 1 forwards 400ms);
             }
         }
         &.hideState{
