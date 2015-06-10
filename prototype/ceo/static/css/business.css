@@ -556,6 +556,7 @@ img {
       background: #040404;
       border-radius: .08rem; }
     .guess .game .guessNum {
+      box-shadow: 0 0 20px #000 inset;
       overflow: hidden;
       width: 1rem;
       background: #fff;
