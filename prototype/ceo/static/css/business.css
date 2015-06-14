@@ -670,6 +670,41 @@ img {
     .guess #floatRet.success .content {
       background-image: url(../img/success.png); }
 
+/*导航*/
+#guideDiv {
+  position: relative;
+  overflow: hidden; }
+  #guideDiv .logo {
+    position: absolute;
+    z-index: 100;
+    top: .3rem;
+    left: 0;
+    width: 1.7rem;
+    height: .6rem; }
+  #guideDiv #scroller {
+    position: absolute;
+    z-index: 1; }
+  #guideDiv .slide {
+    float: left; }
+    #guideDiv .slide img {
+      width: 100%;
+      height: 100%; }
+  #guideDiv #indicator {
+    position: absolute;
+    z-index: 100;
+    bottom: 5px;
+    right: 50px;
+    width: 110px;
+    height: 20px;
+    margin: 10px auto;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUBAMAAABohZD3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QUGCDYztyDUJgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAGFBMVEUAAADNzc3Nzc3Nzc3Nzc3Nzc3Nzc3///8aWwwLAAAABnRSTlMAX5Ks3/nRD0HIAAAAAWJLR0QHFmGI6wAAAFtJREFUGFdjYGBgEHYNMWRAAJE0IHCEc5nSwEABxleD8JOgXMY0KBCA8FlgfAcIXwzGT4TwzWD8ZAjfDcZPgfDDYPxU7Hx09ejmoduH7h5096L7B8O/6OGBGl4APYg8TQ0XAScAAAAASUVORK5CYII=); }
+  #guideDiv #dotty {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #777; }
+
 @-webkit-keyframes slideDown {
   0% {
     -webkit-transform: translateY(-120%);
