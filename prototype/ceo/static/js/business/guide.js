@@ -1,6 +1,9 @@
 'use strict';
 (function() {
-	var w;
+	//for test.
+//	localStorage.clear();
+	var w; 
+	var timer;
 	if(skipGuide()){
 		$(function() {
 			setStyles();
@@ -31,10 +34,7 @@
 	}
 
 	function init() {
-		var myScroll;
-		var itemLen = 4;
-		var timer;
-		myScroll = new IScroll('#wrapper', {
+		var myScroll = new IScroll('#wrapper', {
 			scrollX: true,
 			scrollY: false,
 			momentum: false,
@@ -47,10 +47,13 @@
 			}
 		});
 		myScroll.on('scrollEnd', function() {
+			if(timer){
+				clearTimeout(timer);
+				timer=null;
+			}
 			if (w) {
 				var index = Math.abs(myScroll.x / w);
 				if (index == $("#scroller").children().length - 1) {
-					clearTimeout(timer);
 					timer = setTimeout(function() {
 						localStorage.setItem('skipGuide', true);
 						gotoIndexPage();
