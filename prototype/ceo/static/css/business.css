@@ -661,7 +661,8 @@ img {
     position: absolute;
     z-index: 100;
     bottom: .2rem;
-    right: .4rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
     width: 1.4rem;
     height: .2rem; }
     #guideDiv #indicator li {
