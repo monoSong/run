@@ -1,0 +1,275 @@
+@charset "UTF-8";
+/*兼容前缀*/
+/*弹性布局*/
+/* 分割线*/
+* {
+  outline: none !important; }
+
+html {
+  -webkit-text-size-adjust: "100%";
+  min-width: 320px;
+  height: 100%; }
+
+ul, li, div, p, body, pre, dl, dt, dd {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+cite, i, em, del {
+  font-style: normal; }
+
+.hide {
+  display: none; }
+
+body {
+  color: #333;
+  font-size: .24em;
+  text-align: left;
+  /*font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;*/
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  font-weight: normal;
+  -webkit-user-select: none;
+  line-height: 1;
+  min-width: 6.4rem; }
+
+* {
+  box-sizing: border-box; }
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none; }
+
+p {
+  line-height: 1.6; }
+
+h1, h2, h3, h4, h5, h6, h7 {
+  font-weight: normal; }
+
+/* ==========  special common  =========== */
+table {
+  width: 100%; }
+
+.layout {
+  padding: 0.2rem;
+  text-align: center; }
+
+.hBox {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal; }
+
+.vBox {
+  display: -webkit-box;
+  -webkit-box-orient: vertical; }
+
+.flex1 {
+  -webkit-box-flex: 1; }
+
+.flex2 {
+  -webkit-box-flex: 2; }
+
+.flex3 {
+  -webkit-box-flex: 3; }
+
+.flex4 {
+  -webkit-box-flex: 4; }
+
+.flex5 {
+  -webkit-box-flex: 5; }
+
+.flex6 {
+  -webkit-box-flex: 6; }
+
+.flex7 {
+  -webkit-box-flex: 7; }
+
+.flex8 {
+  -webkit-box-flex: 8; }
+
+.flex9 {
+  -webkit-box-flex: 9; }
+
+.flex10 {
+  -webkit-box-flex: 10; }
+
+.flex11 {
+  -webkit-box-flex: 11; }
+
+.flex12 {
+  -webkit-box-flex: 12; }
+
+/*清除浮动*/
+.clearfix:after {
+  content: "";
+  height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
+
+.canTouch {
+  cursor: pointer; }
+
+/*更多*/
+.more {
+  position: relative;
+  padding-right: .4rem;
+  width: 100%;
+  box-sizing: border-box; }
+
+.more:after {
+  position: absolute;
+  right: .05rem;
+  top: 50%;
+  display: block;
+  content: '';
+  width: .6em;
+  height: .6em;
+  border-left: .02rem solid #bdbdbd;
+  border-bottom: .02rem solid #bdbdbd;
+  -webkit-transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg); }
+
+.more-up:after {
+  -webkit-transform: translateY(-80%) scaleX(1.1) rotateZ(135deg); }
+
+.more-down:after {
+  -webkit-transform: translateY(-80%) scaleX(1.1) rotateZ(-45deg); }
+
+/* ======= ele common ========*/
+input[type=text] {
+  padding: 0 .1rem; }
+
+img {
+  vertical-align: top;
+  pointer-events: none;
+  width: 100%; }
+
+/* ====== business common =======  */
+/*默认通过状态*/
+.btn {
+  height: .84rem;
+  line-height: .84rem;
+  border-radius: 0.06rem;
+  color: #fff;
+  font-size: .32rem;
+  text-align: center; }
+  .btn.red {
+    background: #e94040; }
+    .btn.red:active {
+      background: #A23232; }
+
+/*申请状态页*/
+.applyStatus {
+  background: #f6f6f6;
+  padding-bottom: 1.24rem; }
+  .applyStatus .main {
+    background: #fff; }
+  .applyStatus .iconStatus {
+    position: relative;
+    color: #999;
+    font-size: .24rem;
+    padding: 0.5rem 0 0.26rem 0; }
+    .applyStatus .iconStatus:before, .applyStatus .iconStatus:after {
+      content: '';
+      position: absolute; }
+    .applyStatus .iconStatus:before {
+      background-image: url(../img/statusApply.png);
+      background-color: #fff;
+      z-index: 10;
+      background-size: 100%;
+      top: .44rem;
+      left: -.8rem;
+      width: .5rem;
+      height: .5rem; }
+    .applyStatus .iconStatus:after {
+      width: .04rem;
+      top: 0;
+      bottom: 0;
+      left: -.56rem;
+      background: #e94040; }
+    .applyStatus .iconStatus p {
+      font-size: .32rem;
+      margin-bottom: .1rem;
+      line-height: 1.2; }
+    .applyStatus .iconStatus.pass p {
+      color: #e94040; }
+    .applyStatus .iconStatus.wait p {
+      color: #666; }
+    .applyStatus .iconStatus.wait:before {
+      background-position: 0 -27px; }
+    .applyStatus .iconStatus.wait:after {
+      background: #d6d6d6; }
+    .applyStatus .iconStatus:nth-child(1) {
+      padding-top: .26rem; }
+      .applyStatus .iconStatus:nth-child(1):before {
+        top: .2rem; }
+      .applyStatus .iconStatus:nth-child(1):after {
+        top: .5rem; }
+    .applyStatus .iconStatus:nth-last-child(1):after {
+      top: 0;
+      bottom: auto;
+      height: .5rem; }
+  .applyStatus .process {
+    text-align: left;
+    padding-left: .94rem; }
+  .applyStatus .btn {
+    position: fixed;
+    bottom: 0.2rem;
+    left: 0.2rem;
+    right: 0.2rem; }
+  .applyStatus footer {
+    margin-top: .3rem;
+    line-height: 1.4;
+    color: #999999;
+    font-size: .22rem; }
+    .applyStatus footer a {
+      color: #e94040; }
+
+/*申请结果页*/
+.applyRet {
+  background: #f6f6f6; }
+  .applyRet .tip {
+    color: #cecece; }
+  .applyRet .unit {
+    padding-left: 0.2rem;
+    color: #999999; }
+  .applyRet section {
+    background: #fff;
+    margin-bottom: 0.2rem; }
+    .applyRet section > dl {
+      display: -webkit-box;
+      border-bottom: solid 1px #e9e9e9;
+      padding: 0.3rem 0.54rem 0.3rem 0.2rem;
+      font-size: .28rem; }
+      .applyRet section > dl.more:after {
+        right: 0.2rem; }
+      .applyRet section > dl:nth-last-child(1) {
+        border: none; }
+      .applyRet section > dl.tipC {
+        padding-right: 0.2rem; }
+      .applyRet section > dl.head {
+        padding: .4rem; }
+        .applyRet section > dl.head img {
+          width: 1.32rem;
+          height: 1.32rem;
+          border-radius: 50%;
+          display: block;
+          margin: 0 auto; }
+      .applyRet section > dl.block {
+        display: block; }
+        .applyRet section > dl.block dt {
+          padding-bottom: 0.2rem; }
+      .applyRet section > dl dt {
+        color: #666;
+        -webkit-box-flex: 1; }
+      .applyRet section > dl dd {
+        color: #333; }
+
+/*# sourceMappingURL=business.css.map */

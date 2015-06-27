@@ -1,0 +1,80 @@
+/*兼容前缀*/
+@mixin pre($pro,$val){
+    -webkit-#{$pro}:$val;
+//     -moz-#{$pro}:$val;
+//      -ms-#{$pro}:$val;
+//          #{$pro}:$val;
+}
+
+
+
+//@mixin relateBrowser($name,$animate...) {
+//  $max: length($animate);
+//  $animations: '';
+//
+//  @for $i from 1 through $max {
+//      $animations: #{$animations + nth($animate, $i)};
+//  
+//      @if $i < $max {
+//          $animations: #{$animations + ", "};
+//      }
+//  }
+//  #{$browser}#{$name}: $animations;
+//}
+
+@mixin relateBrowser($name,$animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+    
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    
+    -webkit-#{$name}:$animations;
+    -moz-#{$name}:$animations;
+    -ms-#{$name}:$animations;
+    #{$name}:$animations;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        $browser: '-webkit-'; 
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        $browser: '-moz-'; 
+        @content;
+    }
+    @-o-keyframes #{$name} {
+        $browser: '-o-'; 
+        @content;
+    }
+    @keyframes #{$name} {
+        $browser: ''; 
+        @content;
+    }
+}
+$browser:null;
+
+
+/*弹性布局*/
+@mixin flexBox(){
+    display: -webkit-box;
+//  display: -moz-flexbox;
+//  display: -ms-flexbox;
+}
+
+/* 分割线*/
+@mixin splitLine($bgColor: $splitLine) {
+    border-bottom:solid 1px $bgColor;
+}
+
+@mixin lineDot(){
+    white-space:nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+}
