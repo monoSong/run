@@ -231,6 +231,9 @@ $radius:.06rem;
                     margin: 0 auto;
                 }
             }
+            &.more:active{
+                background:#efefef;
+            }
             &.block{
                 display: block;
                 dt{

@@ -262,6 +262,8 @@ img {
           border-radius: 50%;
           display: block;
           margin: 0 auto; }
+      .applyRet section > dl.more:active {
+        background: #efefef; }
       .applyRet section > dl.block {
         display: block; }
         .applyRet section > dl.block dt {
