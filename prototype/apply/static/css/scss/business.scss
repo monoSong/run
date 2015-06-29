@@ -265,6 +265,7 @@ $radius:.06rem;
     ::-webkit-input-placeholder{
         color:#cecece;
     }
+<<<<<<< HEAD
     .wrapper{
        transform:translateX(-200%);
        background: #fff;
@@ -339,6 +340,16 @@ $radius:.06rem;
            line-height: .6rem;
            height: .6rem;
        }
+=======
+    select{
+       display: none;
+       position: fixed; 
+       bottom: 1rem;
+       left: 50%; 
+       z-index: 102;
+       -webkit-transform: translateX(-50%);
+//     height: .5rem;
+>>>>>>> 08d0d53efb01c0287195340f69d64f1170cbbadb
     }
     #shadowDiv{
         display: none;
