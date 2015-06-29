@@ -10,69 +10,73 @@
 		<script src="static/js/business/applyRet.js"></script>
 	</head>
 	<body class="applyRet">
-		<div class="main">
-			<section>
-				<dl class="head">
-					<img src="static/img/temp/p1.jpg"/>
-				</dl>
-				<dl>
-					<dt>姓名</dt>
-					<dd>吴聪聪</dd>
-				</dl>
-				<dl class="more" relateSel='age'>
-					<dt>年龄</dt>
-					<dd>25</dd>
-				</dl>
-				<dl class="more" relateSel='gender'>
-					<dt>性别</dt>
-					<dd>女</dd>
-				</dl>
-				<dl class="more" relateSel='city'>
-					<dt>城市</dt>
-					<dd>深圳市</dd>
-				</dl>
-				<dl class="tipC">
-					<dt>身高</dt>
-					<dd>
-						<input placeholder="请输入您的身高"/>
-						<span class="unit">CM</span>
-					</dd>
-				</dl>
-				<dl class="tipC">
-					<dt>体重</dt>
-					<dd>
-						<input placeholder="请输入您的体重"/>
-						<span class="unit">KG</span>
-					</dd>
-				</dl>
-			</section>	
-			<section>
-				<dl class="more" relateSel='actType'>
-					<dt>运动类型</dt>
-					<dd>
-						<span class="tip">请选择陪练的运动类型</span>
-					</dd>
-				</dl>
-				<dl class="more" relateSel='years'>
-					<dt>年限</dt>
-					<dd>
-						<span class="tip">请填写您参加运动年限</span>
-					</dd>
-				</dl>
-				<dl class="block">
-					<dt>经历</dt>
-					<dd>
-						<textarea name="" rows="" cols="" placeholder="请填写培训经历或专业经历"></textarea>
-					</dd>
-				</dl>
-			</section>
-			<div class="layout">
-				<div class="btn red">
-					提交申请
-				</div>
+		<div id="wrapper">
+			<div id="scroller">
+				<div class="main">
+					<section>
+						<dl class="head">
+							<img src="static/img/temp/p1.jpg"/>
+						</dl>
+						<dl>
+							<dt>姓名</dt>
+							<dd>吴聪聪</dd>
+						</dl>
+						<dl class="more" relateSel='age'>
+							<dt>年龄</dt>
+							<dd>25</dd>
+						</dl>
+						<dl class="more" relateSel='gender'>
+							<dt>性别</dt>
+							<dd>女</dd>
+						</dl>
+						<dl class="more" relateSel='city'>
+							<dt>城市</dt>
+							<dd>深圳市</dd>
+						</dl>
+						<dl class="tipC">
+							<dt>身高</dt>
+							<dd>
+								<input type="tel" placeholder="请输入您的身高"/>
+								<span class="unit">CM</span>
+							</dd>
+						</dl>
+						<dl class="tipC">
+							<dt>体重</dt>
+							<dd>
+								<input type="tel" placeholder="请输入您的体重"/>
+								<span class="unit">KG</span>
+							</dd>
+						</dl>
+					</section>	
+					<section>
+						<dl class="more" relateSel='actType'>
+							<dt>运动类型</dt>
+							<dd>
+								<span class="tip">请选择陪练的运动类型</span>
+							</dd>
+						</dl>
+						<dl class="more" relateSel='years'>
+							<dt>年限</dt>
+							<dd>
+								<span class="tip">请填写您参加运动年限</span>
+							</dd>
+						</dl>
+						<dl class="block">
+							<dt>经历</dt>
+							<dd>
+								<textarea name="" rows="" cols="" placeholder="请填写培训经历或专业经历"></textarea>
+							</dd>
+						</dl>
+					</section>
+					<div class="layout">
+						<div class="btn red">
+							提交申请
+						</div>
+					</div>
+				</div>	
 			</div>
-			<div id="shadowDiv">
-			</div>
-		</div>	
+		</div>
+		<!--<div style="background: yellowgreen;left:100px; top:100px;width: 1rem;height: 1rem;z-index: 1000;position:absolute;" onclick="window.location=''"> refresh </div>-->
+		<div id="shadowDiv"></div>
 	</body>
 </html>

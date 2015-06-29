@@ -287,7 +287,7 @@ img {
   .applyRet ::-webkit-input-placeholder {
     color: #cecece; }
   .applyRet .wrapper {
-    transform: translateX(-200%);
+    height: 0;
     background: #fff;
     position: fixed;
     overflow: hidden;
@@ -295,9 +295,7 @@ img {
     width: 100%;
     z-index: 102; }
     .applyRet .wrapper.show {
-      display: block;
-      opacity: 0;
-      -webkit-animation: selShow 0.8s linear 1 forwards; }
+      height: auto; }
     .applyRet .wrapper.hide {
       display: none; }
     .applyRet .wrapper .op {
@@ -348,13 +346,25 @@ img {
       height: .6rem; }
   .applyRet #shadowDiv {
     display: none;
-    position: fixed;
+    position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
     z-index: 101;
     background: rgba(0, 0, 0, 0.75); }
+  .applyRet #wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden; }
+  .applyRet #scroller {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    -webkit-transform: translateZ(0); }
 
 @-webkit-keyframes selShow {
   0% {

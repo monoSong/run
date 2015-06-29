@@ -266,7 +266,9 @@ $radius:.06rem;
         color:#cecece;
     }
     .wrapper{
-       transform:translateX(-200%);
+//     display: none;
+//     transform:translateY(200%);
+       height: 0;
        background: #fff;
        position: fixed; 
        overflow: hidden;
@@ -274,9 +276,10 @@ $radius:.06rem;
        width:100%;
        z-index: 102;
        &.show{
-           display: block;
-           opacity: 0;
-           @include pre(animation,selShow .8s linear 1 forwards );
+//         display: block;
+           height: auto;
+//         opacity: 0;
+//         @include pre(animation,selShow .8s linear 1 forwards );
        }
        &.hide{
            display: none;
@@ -342,13 +345,29 @@ $radius:.06rem;
     }
     #shadowDiv{
         display: none;
-        position: fixed;
+        position: absolute;
+        top: 0;
         left: 0;
         right: 0;
-        top: 0;
-        bottom: 0;
         z-index: 101;
         background: rgba(0,0,0,.75);
+    }
+    
+    #wrapper {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    #scroller {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        -webkit-transform: translateZ(0);
     }
 }
 
