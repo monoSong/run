@@ -48,6 +48,7 @@ $(function(){
 				scrollY: true,
 				momentum: false,
 				snap: true,
+//				bounce:false,
 				snapSpeed: 400
 			}
 			iscrollMap[selId]=new IScroll('#'+selId, options);
@@ -55,6 +56,9 @@ $(function(){
 	}
 	
 	function bindEvents(){
+		
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+		
 		$(document).on('click','[relateSel]',function(){
 			var $owner = $(this);
 			var $sel = $('#'+$owner.attr('relateSel')+'C');
@@ -83,15 +87,20 @@ $(function(){
 		});
 	}
 	function showSel($t,initValue){
-		setTimeout(function(){
 			$t.removeClass('hide').addClass('show');
+		setTimeout(function(){
 			var el = $t.find('[value='+initValue+']')[0];
+			
 			if(el){
-				iscrollMap[$t.attr("selId")].scrollToElement(el);
+try{				
+//				iscrollMap[$t.attr("selId")].scrollToElement(el);
+}catch(e){
+	alert(e.message);
+}
 			}
 			
 		},30);
-		$("#shadowDiv").show();
+		$("#shadowDiv").css("height",$(document).height()).show();
 	}
 	function hideSel($t){
 		$('.wrapper').removeClass('show').addClass('hide');
