@@ -273,5 +273,34 @@ img {
         -webkit-box-flex: 1; }
       .applyRet section > dl dd {
         color: #333; }
+  .applyRet input, .applyRet textarea {
+    border: 0px;
+    text-align: right;
+    color: #333;
+    font-size: .28rem; }
+  .applyRet textarea {
+    text-align: left;
+    width: 100%;
+    height: 5em;
+    padding: 0;
+    resize: none; }
+  .applyRet ::-webkit-input-placeholder {
+    color: #cecece; }
+  .applyRet select {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    z-index: 102;
+    -webkit-transform: translateX(-50%); }
+  .applyRet #shadowDiv {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 101;
+    background: rgba(0, 0, 0, 0.75); }
 
 /*# sourceMappingURL=business.css.map */
