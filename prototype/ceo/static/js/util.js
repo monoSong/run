@@ -1,8 +1,9 @@
 var util={
 	shadow:{
 		show:function(){
+debugger;			
 			if(~$("#shadowDiv").length){
-				$("<div id='shadowDiv'></div>").appendTo('body');
+				$("<div id='shadowDiv' class='shadowDiv'></div>").appendTo('body');
 			}
 			$("#shadowDiv").show();
 		},

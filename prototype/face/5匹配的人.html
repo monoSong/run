@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>匹配的人</title>
+		<link  rel="stylesheet" href="static/css/business.css"/>
+		<script src="static/js/jquery-2.0.3.js"></script>
+		<script src="static/js/init.js"></script>
+		<script src="static/js/util.js"></script>
+		<script src="static/js/tab.js"></script>
+		<script src="static/js/business/matched.js"></script>
+	</head>
+	<body style="background: url(static/img/bgRun.jpg) no-repeat left top; background-size: cover;">
+		<div id='main' class="face_matched">
+			<ul class="tab hBox">
+				<li class="flex1 active" target="recordC">约人记录</li>
+				<li class="flex1" target="topList">排行榜</li>
+			</ul>
+			<div class="container">
+				<div id="recordC" class="tabItem">
+					<div id='record' class="record">
+						<ul class="bgRound">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<ul class="dot">
+							<li class="r1 " translateX='1.2rem'></li>
+							<li class="r2-1 "  translateX='2.12rem'></li>
+							<li class="r2-2 " translateX='2.2rem'></li>
+							<li class="r3-1 " translateX='3.4rem'></li>
+							<li class="r3-2 " translateX='3.64rem'></li>
+							<li class="r4-1 " translateX='5.34rem'></li>
+							<li class="r4-2 " translateX='5.44rem'></li>
+						</ul>
+						<ul class="coach">
+							<li>
+								<section id='world'>
+									<img id='hello' src="static/img/temp/p1.jpg"/>	
+								</section>
+								<p>张鹏</p>
+								<div><span>健身</span>执教<span>3</span>年</div>
+							</li>
+							<li class="free">
+								<section>
+									<img src="static/img/temp/p2.jpg"/>
+								</section>
+								<p>张鹏</p>
+								<div><span>健身</span>执教<span>3</span>年</div>
+							</li>
+							<li>
+								<section>
+									<img src="static/img/temp/p1.jpg"/>	
+								</section>
+								<p>张鹏</p>
+								<div><span>健身</span>执教<span>3</span>年</div>
+							</li>
+							<li>
+								<section>
+									<img src="static/img/temp/p1.jpg"/>	
+								</section>
+								<p>张鹏</p>
+								<div><span>健身</span>执教<span>3</span>年</div>
+							</li>
+							<li>
+								<section>
+									<img src="static/img/temp/p1.jpg"/>	
+								</section>
+								<p>张鹏</p>
+								<div><span>健身</span>执教<span>3</span>年</div>
+							</li>
+							<li>
+								<section>
+									<img src="static/img/temp/p1.jpg"/>	
+								</section>
+								<p>张鹏</p>
+								<div><span>健身</span>执教<span>3</span>年</div>
+							</li>
+							<li>
+								<section>
+									<img src="static/img/temp/p1.jpg"/>	
+								</section>
+								<p>张鹏</p>
+								<div><span>健身</span>执教<span>3</span>年</div>
+							</li>
+							<li>
+								<section>
+									<img src="static/img/temp/p1.jpg"/>	
+								</section>
+								<p>张鹏</p>
+								<div><span>健身</span>执教<span>3</span>年</div>
+							</li>
+						</ul>
+					</div>
+					<div class="changeC">
+						<div id='btnChange' class="btn">
+							换一批 click me
+						</div>
+					</div>
+				</div>
+				<div id="topList" class="appoint tabItem" style="display: none; color: #fff; font-size: .72rem;">
+					world.
+				</div>
+			</div>
+		</div>
+		<div id="appointOk" class="dialog appointOk">
+			<div class="title">
+				看<span>脸</span>约嘿咻
+			</div>
+			<div class="content">
+				<p>已经约约<span>TA</span>，对方同意后我们会短信通知您.</p>
+				<div class="btnC">
+					<div id='btnContinue' class="btn">
+						继续约人
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="dialogConfig" class="dialog config">
+			<div class="title">
+				看<span>脸</span>约嘿咻
+			</div>
+			<div class="content">
+				<p>确认约<span>TA</span>?</p>
+				<div class="btnC hBox">
+					<div class="btn flex1" id='btnYes'>
+						是
+					</div>
+					<div class="btn flex1" id='btnNo'>
+						不，再看看
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="dialogApp" class="dialog dialogApp">
+			<div class="title">
+				看<span>脸</span>约嘿咻
+			</div>
+			<div class="content">
+				<div class="btnC">
+					<p>已下载初炼APP</p>
+					<div class="btn">
+						去初炼查看
+					</div>
+					<p>新用户，请先下载初炼APP可查看</p>
+					<div class="btn">
+						下载初炼APP
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
