@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link  rel="stylesheet" href="static/css/business.css"/>
+		<script src="static/js/jquery-2.0.3.js"></script>
+		<script src="static/js/init.js"></script>
+		<script src="static/js/util.js"></script>
+		<script src="static/js/business/uTxt.js"></script>
+	</head>
+	<body class="bgRun">
+		<div id='main' class="face_uTxt beltPage vBox bgRun">
+			<div class="title">
+				看<span>脸</span>约嘿咻
+			</div>
+			<div class="content flex1 vBox">
+				<div class="belt"></div>
+				<div id="step1" class="step1 flex1 vBox">
+					<div class="desc">
+						<p><span>初炼</span>是靠谱的约运动平台</p>
+						<p>请输入<span>手机号验证通过</span>后方可继续</p>
+					</div>
+					<div class="infoBlock flex1">
+						<div class="txtC telC">
+							<input class="txt" id="hello" type="tel" maxlength="11"/>
+						</div>
+						<div class="txtC vcodeC">
+							<input class="txt" type="tel" maxlength="6"/>
+							<div id='btnGetVcode' class="btn">重新发送 click me</div>
+							<p id='restSecC' class="restSecC"><span id="restSec"></span>后可重新获取</p>
+						</div>
+					</div>
+				</div>
+				<div id="step2" class="step2 flex1 vBox">
+					<div class="infoBlock flex1">
+						<div class="txtC wxNoC">
+							<input class="txt" id="hello" type="tel" maxlength="11"/>
+						</div>
+						<div class="wish">
+							<p>约人性别：</p>
+							<ul id='gender' class="options">
+								<li>男神</li>
+								<li class="selected">女神</li>
+								<li>不在意</li>
+							</ul>
+						</div>
+						<div class="wish">
+							<p>约哪种运动：</p>
+							<ul id='sportType' class="options">
+								<li>跑步</li>
+								<li class="selected">游泳</li>
+								<li>羽毛球</li>
+								<li>跳绳</li>
+								<li class="selected">踢毽子</li>
+								<li>举重</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="btnC">
+					<div id='btnNext' class="btn">
+						继续进行 click me
+					</div>
+					<div id='btnFinish' class="btn">
+						完成，马上开约 click me
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
