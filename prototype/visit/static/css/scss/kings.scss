@@ -62,6 +62,23 @@
                 margin: .2rem 0;
             }
         }
+        .data{
+            margin-bottom: .3rem;
+            p,img{
+                width: .9rem;
+                height: .9rem;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: .3rem;
+                margin-bottom: .1rem;
+            }
+            p{
+                border: solid 1px #b6b6b6;
+                line-height: .9rem;
+                text-align: center;
+            }
+            
+        }
     }
     
 }

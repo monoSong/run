@@ -32,7 +32,8 @@ cite, i, em, del {
 
 img {
   display: block;
-  width: 100%; }
+  width: 100%;
+  vertical-align: bottom; }
 
 body {
   color: #333;

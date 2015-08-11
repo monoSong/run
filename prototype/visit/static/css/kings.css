@@ -32,7 +32,8 @@ cite, i, em, del {
 
 img {
   display: block;
-  width: 100%; }
+  width: 100%;
+  vertical-align: bottom; }
 
 body {
   color: #333;
@@ -299,5 +300,18 @@ footer {
       font-size: .36rem;
       color: #222325;
       margin: .2rem 0; }
+  .findDetail section .data {
+    margin-bottom: .3rem; }
+    .findDetail section .data p, .findDetail section .data img {
+      width: .9rem;
+      height: .9rem;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: .3rem;
+      margin-bottom: .1rem; }
+    .findDetail section .data p {
+      border: solid 1px #b6b6b6;
+      line-height: .9rem;
+      text-align: center; }
 
 /*# sourceMappingURL=kings.css.map */
