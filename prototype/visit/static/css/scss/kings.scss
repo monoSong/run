@@ -1,28 +1,68 @@
 @charset "utf-8";
 @import 'macro.scss';
-*{outline: none !important;}
-html{@include pre('text-size-adjust','100%');  min-width: 320px;height: 100%;}
-ul,li,div,p,body,pre,dl,dt,dd{margin:0;padding:0;}
-li{list-style:none;}
-a{text-decoration:none;}
-cite,i,em,del{font-style:normal;}
-.hide{display:none;} 
-body{
-    color:#333;
-    font-size: .24em;
-    text-align: left;
-    /*font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;*/
-    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-    font-weight: normal;
-    -webkit-user-select:none;
-    line-height: 1;
-    min-height: 100%;
-    min-width: 6.4rem;
+@import 'public.scss';
+
+/*发现首页*/
+.findIndex{
+    padding-bottom: .98rem;
+    .content{
+        li{
+            position: relative;
+            p{
+                @include hvCenter() ;
+                font-size: .6rem;
+                color: #fff;
+                text-shadow: 1px 1px 3px #333;
+            }
+        } 
+    }
 }
-*{box-sizing: border-box;}
-*{@include pre(tap-highlight-color,rgba(0,0,0,0));@include pre(touch-callout,none);@include pre(text-size-adjust,none);}
 
-/**/
-
-
+/*发现详情页*/
+.findDetail{
+    section{
+        position: relative;
+        .album{
+            height: 4.5rem;  
+            overflow: hidden;
+            img{
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
+        }
+        .fStatus{
+            &:after{
+                content:'';
+                font-family: FontAwesome;
+                color: $color_hl;
+                position: absolute;
+                top: .2rem;
+                right: .2rem;
+                font-size:.6rem;
+                text-shadow: 1px 1px 1px #333;
+            }
+            &.focused:after{
+                content:"";
+            }
+        }
+        .merIcon{
+            width:1.5rem;
+            height: 1.5rem;
+            border: solid .06rem #fff;
+            border-radius: 50%;
+            position: absolute;
+            right: $padding;
+            top: 3.6rem;
+        }
+        .desc{
+            padding: $padding;
+            h2{
+                font-size: .36rem;
+                color: $color_dark;
+                margin: .2rem 0;
+            }
+        }
+    }
+    
+}
 

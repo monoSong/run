@@ -1,27 +1,5 @@
 @charset "utf-8";
 @import 'macro.scss';
-*{outline: none !important;}
-html{@include pre('text-size-adjust','100%');  min-width: 320px;height: 100%;}
-ul,li,div,p,body,pre,dl,dt,dd{margin:0;padding:0;}
-li{list-style:none;}
-a{text-decoration:none;}
-cite,i,em,del{font-style:normal;}
-.hide{display:none;} 
-body{
-    color:#333;
-    font-size: .24em;
-    text-align: left;
-    /*font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;*/
-    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-    font-weight: normal;
-    -webkit-user-select:none;
-    line-height: 1;
-    min-height: 100%;
-    min-width: 6.4rem;
-}
-*{box-sizing: border-box;}
-*{@include pre(tap-highlight-color,rgba(0,0,0,0));@include pre(touch-callout,none);@include pre(text-size-adjust,none);}
-
-
+@import 'public.scss';
 
 

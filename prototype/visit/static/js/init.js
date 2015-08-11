@@ -3,4 +3,10 @@
 	document.write(text);
 	document.documentElement.style.fontSize = "50px";
 }())
+
+$(document).on('click','.canClick',function(){
+	$('.clicked').removeClass('clicked');
+	$(this).addClass('clicked');
+})
+
 	
