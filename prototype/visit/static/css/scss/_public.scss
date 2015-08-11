@@ -125,6 +125,8 @@ header{
 }
 
 footer{
+    @include flexBox();
+    font-family:FontAwesome;
     position: fixed;
     box-shadow: 0 0 10px #fff;
     bottom: 0;
