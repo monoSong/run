@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>看脸排行榜</title>
+		<link  rel="stylesheet" href="static/css/business.css"/>
+		<script src="static/js/jquery-2.0.3.js"></script>
+		<script src="static/js/init.js"></script>
+		<script src="static/js/util.js"></script>
+		<script src="static/js/tab.js"></script>
+		<script src="static/js/business/rank.js"></script>
+	</head>
+	<body>
+		<div class="face_rank">
+			<div class="title">
+				看<span>脸</span>约嘿咻
+			</div>
+			<ul class="tab hBox">
+				<li class="flex1 active" target="appoint">我约的人</li>
+				<li class="flex1" target="appointed">约我的人</li>
+			</ul>
+			<div>
+				<div id="appoint" class="appoint tabItem">
+					<ul>
+						<li>
+							<img src="static/img/temp/p1.jpg" />
+							<div>
+								<div class="name matched">Johnny </div>
+								<div class="info">
+									<span class="male"></span>
+									健身
+									<i>执教3年</i>
+								</div>
+								<div class="status wait"></div>
+							</div>
+						</li>
+						<li>
+							<img src="static/img/temp/p1.jpg" />
+							<div>
+								<div class="name">Johnny </div>
+								<div class="info">
+									<span class="male"></span>
+									健身
+									<i>执教3年</i>
+								</div>
+								<div class="status refuse"></div>
+							</div>
+						</li>
+						<li>
+							<img src="static/img/temp/p1.jpg" />
+							<div>
+								<div class="name">Johnny </div>
+								<div class="info">
+									<span class="male"></span>
+									健身
+									<i>执教3年</i>
+								</div>
+								<div class="status">
+									<div class="viewInfo">
+										查看
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="appointed" class="appointed tabItem" style="display: none;">
+					world
+				</div>
+			</div>
+			<div class="btnC">
+				<div class="btn">
+					继续约人
+				</div>
+			</div>
+			<div class="btnC2 hBox">
+				<div class="btn flex1">
+					继续约人
+				</div>
+				<div class="btn dark flex1">
+					得瑟约人记录
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

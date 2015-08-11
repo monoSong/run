@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>红包首页</title>
+		<link  rel="stylesheet" href="static/css/business.css"/>
+		<script src="static/js/jquery-2.0.3.js"></script>
+		<script src="static/js/init.js"></script>
+		<script src="static/js/util.js"></script>
+		<script src="static/js/iscroll.js"></script>
+		<script src="static/js/business/index.js"></script>
+	</head>
+	<body style="background: #f6f6f6;">
+		<div class="index">
+			<div>
+				<div id='conatiner' class="head">
+					<p class="p1 abs">2000万</p>
+					<p class="p2 abs">红包豪气派发</p>
+					<p class="p3 abs">现金红包+滴滴红包</p>
+					<div id='inviteC1' style="display: none;">
+						<div class="invitateTxt bBorderFont abs">
+							邀请好友注册<br />各得神秘现金红包
+						</div>
+						<div id="btnInvite" class="btnInvite btnReact abs btn">
+							邀请好友
+						</div>
+						
+					</div>
+					<div id="guideC1">
+						<div class="guideTxt1 bBorderFont abs">
+							红包，来了
+						</div>
+						<div class="guideTxt2 abs">初炼庆融资成功&新版上市</div>
+					</div>
+				</div>
+				<div id='inviteC2' style="display: none;">
+					<div class="row more">
+						已邀请好友
+						<span>3位</span>
+					</div>
+					<div class="row">
+						已获得红包
+						<span>¥15</span>
+						<em>请注意查看哦～</em>
+					</div>
+					<dl class="rules">
+						<dt>奖励说明：</dt>
+						<dd>每个用户最多可获得50个邀请好友奖励</dd>
+						<dd>每个用户只能被邀请一次</dd>
+						<dd>同一手机号、同一设备视为同一个用户</dd>
+						<dd>需关注”初炼”微信公众号领取现金红包</dd>
+					</dl>
+				</div>
+				<div id="guideC2" class="guideC2">
+					<div class="row">
+						<input id="txtTel" type="tel" placeholder="请输入你的手机号" maxlength="11">
+						<div id='btnVCode' class="btn">获取验证码</div>
+					</div>
+					<div class="row">
+						<input id="txtVCode" type="tel" placeholder="请输入手机短信中的验证码" maxlength="6">
+					</div>
+					<div class="row psd">
+						<input id="txtPsd" type="password" placeholder="请输入你的密码">
+						<em class="spot"></em>
+					</div>
+					<div class="row icode">
+						<input id="txtICode" type="tel" placeholder="邀请码（没有可以不填）">
+					</div>
+					<div class="btnC">
+						<div id='btnRegist'>注册立即领奖(click me)</div>
+					</div>
+				</div>
+			</div>
+			<!-- 用户信息 -->
+			<div id='userInfo' class="userInfo">
+				<div class="name more">
+					头像
+					<img src="static/img/temp/t1.gif" />
+				</div>
+				<div class="infos">
+					<dl class="row hBox">
+						<dt>姓名</dt>
+						<dd>Nako</dd>
+					</dl>
+					<dl  class="row hBox more" relateSel='age'>
+						<dt>年龄</dt>
+						<dd>25</dd>
+					</dl>
+					<dl  class="row hBox more" relateSel='gender'>
+						<dt>性别</dt>
+						<dd>女</dd>
+					</dl>
+				</div>
+				<div class="btnC">
+					<div class="btn">领取奖励</div>
+				</div>
+			</div>
+		</div>	
+		
+		<div class="btnAppC">
+			<div id="btnApp" class="btn">下载初炼APP，更多惊喜等着你</div>
+		</div>
+		<div id="shadowDiv"></div>
+	</body>
+</html>
