@@ -168,9 +168,62 @@
       color: #444; }
       .filter-search .f li:last-child {
         border-right: none; }
-    .filter-search .f .selected {
-      color: #ff4200;
-      border-bottom: none;
+      .filter-search .f li.active {
+        color: #ff4200;
+        border-bottom: none;
+        background-color: #FFF; }
+        .filter-search .f li.active:after {
+          content: "";
+          height: 0;
+          position: absolute;
+          left: 0;
+          right: 0;
+          background: #222325;
+          bottom: 0; }
+  .filter-search .tab-content {
+    position: absolute;
+    z-index: 9;
+    width: 97%;
+    border: .02rem solid #b2b3b9;
+    border-width: 0 .02rem .02rem; }
+    .filter-search .tab-content .tabItem {
+      padding: 0;
       background-color: #FFF; }
+      .filter-search .tab-content .tabItem h4 {
+        padding: .2rem .1rem .1rem;
+        margin: 0;
+        font-size: .28rem;
+        font-weight: normal; }
+      .filter-search .tab-content .tabItem ul li {
+        height: .58rem;
+        line-height: .58rem;
+        padding-left: .1rem;
+        color: #444;
+        font-size: .28rem; }
+        .filter-search .tab-content .tabItem ul li:active {
+          background-color: #ebebf1; }
+      .filter-search .tab-content .tabItem .item-price {
+        padding: .44rem .15rem .15rem; }
+        .filter-search .tab-content .tabItem .item-price .btn {
+          text-align: center; }
+          .filter-search .tab-content .tabItem .item-price .btn button {
+            width: 50%;
+            height: .6rem;
+            background-color: #333;
+            color: #FFF;
+            border: none;
+            border-radius: .06rem; }
+      .filter-search .tab-content .tabItem .tags {
+        margin-top: .2rem;
+        padding: .1rem;
+        overflow: hidden; }
+        .filter-search .tab-content .tabItem .tags .tag {
+          padding: .1rem .15rem;
+          color: #ff4200;
+          border: .02rem solid #ff4200;
+          float: left;
+          margin: 0 .2rem .25rem 0;
+          border-radius: .06rem;
+          font-size: .28rem; }
 
 /*# sourceMappingURL=liuye.css.map */

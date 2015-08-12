@@ -8,6 +8,7 @@ $(function(){
 		$p.children().removeClass('active');
 		var targetId = $(this).addClass('active').attr('target');
 		$containerP.find('.tabItem').hide();
+		$('#'+targetId).parent().show();
 		$('#'+targetId).show();
 		$containerP.removeClass('gsBlur');
 	})

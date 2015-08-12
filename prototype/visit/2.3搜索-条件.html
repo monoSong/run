@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="static/css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="static/css/kings.css"/>
 		<link rel="stylesheet" type="text/css" href="static/css/liuye.css"/>
+		<script src="static/js/tab.js"></script>
 	</head>
 	<body class="findDetail">
 		<div>
@@ -22,12 +23,52 @@
 						<input class="filter-input" placeholder="搜索目的地">
 						<a class="icon-close" href="javascript:;"></a>
 					</div>
-					<ul class="f">
-						<li class="selected">排序</li>
-						<li>价格</li>
-						<li>位置</li>
-						<li>特色</li>
+					<ul class="tab f">
+						<li class="" target='order'>排序</li>
+						<li target='price'>价格</li>
+						<li target='location'>位置</li>
+						<li target='feature'>特色</li>
 					</ul>
+
+					<div class='tab-content' style="display:none;">
+						<div id='order' class="tabItem" style="display:none;">
+							<ul>
+								<li>智能排序</li>
+								<li>优惠力度最大</li>
+								<li>点赞最多</li>
+								<li>离我最近</li>
+							</ul>
+						</div>
+						<div id='price' class="tabItem" style="display:none;">
+							<div class="item-price">
+								<div class="progress-bar">
+								</div>
+								<div class='btn'>
+									<button >确定</button>
+								</div>
+							</div>
+						</div>
+						<div id='location' class="tabItem" style="display:none;">
+							<h4>按行政区选择</h4>
+							<ul>
+								<li><input type="checkbox">不限</li>
+								<li><input type="checkbox">德清县</li>
+								<li><input type="checkbox">平谷县</li>
+								<li><input type="checkbox">延庆县</li>
+							</ul>
+						</div>
+						<div id='feature' class="tabItem" style="display:none;">
+							<h4>民俗特色</h4>
+							<div class="tags">
+								<span class="tag">免费WIFI</span>
+								<span class="tag">免费WIFI</span>
+								<span class="tag">免费WIFI</span>
+								<span class="tag">停车场</span>
+								<span class="tag">停车场</span>
+								<span class="tag">停车场</span>
+							</div>
+						</div>	
+					</div>
 				</div>
 
 				<section>
