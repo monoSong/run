@@ -7,6 +7,7 @@
     padding-bottom: .98rem;
     .content{
         li{
+            margin-bottom: .1rem;
             position: relative;
             p{
                 @include hvCenter() ;
@@ -15,6 +16,7 @@
                 text-shadow: 1px 1px 3px #333;
             }
         } 
+        img{height: 3.6rem;}
     }
 }
 
@@ -26,18 +28,22 @@
             height: 4.5rem;  
             overflow: hidden;
             img{
-                object-fit: cover;
-                object-position: 50% 50%;
+                @include coverImg();
+            }
+            .islider-dot-wrap{
+                
             }
         }
         .fStatus{
+            position: absolute;
+            z-index: 10;
+            top: 0rem;
+            right: 0rem;
+            padding:.4rem; 
             &:after{
                 content:'';
                 font-family: FontAwesome;
                 color: $color_hl;
-                position: absolute;
-                top: .2rem;
-                right: .2rem;
                 font-size:.6rem;
                 text-shadow: 1px 1px 1px #333;
             }
@@ -65,7 +71,7 @@
     }
 }
 
-@mixin coverImg(){
+@mixin coverImg1(){
     object-fit: cover; 
     object-position: center center;
 }
@@ -76,9 +82,14 @@
     padding-bottom: .8rem;
     .album{
         height: 3.06rem;
-        img{
-            @include coverImg();
-        }
+    }
+    #albumIndex{
+        position: absolute;
+        right: .2rem;
+        bottom: .2rem;
+        color: #fff;
+        z-index: 10;
+        text-shadow: 1px 1px 1px #333;
     }
     .actions{
         margin-top: .54rem;
@@ -167,7 +178,7 @@
             height: 100%;
             overflow: hidden;
             div{
-                padding: 0 $padding $padding;
+                padding: 0 $padding*3 $padding $padding;
                 position: absolute;
                 bottom: 0;
 //              background: rgba(0,0,0,.78);
@@ -196,18 +207,38 @@
         }
     }
     .pics{
-        top: 1.7rem;
+        top: .8rem;
+        opacity: 1;
         bottom: 1.4rem;
         position: absolute;
-//          background: ;
         width: 100%;
+        &.showState{
+            -webkit-transition: all .3s linear;
+            background: rgba(0,0,0,.75);
+            .pageIndex{
+                opacity: 1;
+                transform: scale(1,1);
+                -webkit-filter: blur(0px);
+            }
+        }
+        .pageIndex{
+            -webkit-transition: all .2s linear;
+            opacity: 0;
+            transform: scale(2);
+            -webkit-filter: blur(3px);
+            position: absolute;
+            bottom: 0rem;
+            height: .6rem;
+            line-height: .6rem;
+            color: #fff;
+            text-align: center;
+            left: 0;
+            right: 0;
+        }        
         li{
-            position: relative;
-            float: right;
-            width: 95%;
-            height: 100%;
-            overflow: hidden;
             >div{
+//              z-index: 100;
+                left: 0;
                 position: absolute;
                 bottom: 0;
                 width: 100%;
@@ -271,4 +302,47 @@
 //  50%{transform: scale(1.2);
 //      text-shadow: 0 0 1px #333;
 //  }
+}
+
+/*收藏*/
+.collect{
+    .lrBox{
+        padding: .4rem $padding*2 .4rem  $padding;
+        img{
+            border-radius: 0;
+            width: 2rem;
+            height: 1.4rem;
+        }
+        h2{
+            font-size: .3rem;
+        }
+        p{font-size: .24rem;}
+    }
+}
+
+/*个人中心*/
+.userCenter{
+    .unameC{
+        height: 2.8rem;
+        position: relative;
+        .uname{
+            @include hvCenter();
+            img{width: 1.4rem;height: 1.4rem;border-radius: 50%;}
+            p{
+                font-size: .3rem;
+                color: #f33f00;
+                margin-top: .18rem;
+                text-align: center;
+            }
+        }
+    }
+    .actions{
+        li{
+            padding: .28rem $padding;
+            @include splitLine(#b2b3b9);
+            font-size: .3rem;
+        }
+    }
+    
+    
 }

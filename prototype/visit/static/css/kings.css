@@ -10,6 +10,7 @@
 .findIndex {
   padding-bottom: .98rem; }
   .findIndex .content li {
+    margin-bottom: .1rem;
     position: relative; }
     .findIndex .content li p {
       position: absolute;
@@ -19,6 +20,8 @@
       font-size: .6rem;
       color: #fff;
       text-shadow: 1px 1px 3px #333; }
+  .findIndex .content img {
+    height: 3.6rem; }
 
 /*发现详情页*/
 .findDetail section {
@@ -28,18 +31,22 @@
     overflow: hidden; }
     .findDetail section .album img {
       object-fit: cover;
-      object-position: 50% 50%; }
-  .findDetail section .fStatus:after {
-    content: '';
-    font-family: FontAwesome;
-    color: #ff4e00;
+      object-position: center center;
+      height: 100%; }
+  .findDetail section .fStatus {
     position: absolute;
-    top: .2rem;
-    right: .2rem;
-    font-size: .6rem;
-    text-shadow: 1px 1px 1px #333; }
-  .findDetail section .fStatus.focused:after {
-    content: ""; }
+    z-index: 10;
+    top: 0rem;
+    right: 0rem;
+    padding: .4rem; }
+    .findDetail section .fStatus:after {
+      content: '';
+      font-family: FontAwesome;
+      color: #ff4e00;
+      font-size: .6rem;
+      text-shadow: 1px 1px 1px #333; }
+    .findDetail section .fStatus.focused:after {
+      content: ""; }
   .findDetail section .merIcon {
     width: 1.5rem;
     height: 1.5rem;
@@ -61,9 +68,13 @@
   padding-bottom: .8rem; }
   .merDetail .album {
     height: 3.06rem; }
-    .merDetail .album img {
-      object-fit: cover;
-      object-position: center center; }
+  .merDetail #albumIndex {
+    position: absolute;
+    right: .2rem;
+    bottom: .2rem;
+    color: #fff;
+    z-index: 10;
+    text-shadow: 1px 1px 1px #333; }
   .merDetail .actions {
     margin-top: .54rem;
     margin-bottom: .6rem; }
@@ -133,7 +144,7 @@
       height: 100%;
       overflow: hidden; }
       .merDetail .intro li div {
-        padding: 0 0.2rem 0.2rem;
+        padding: 0 0.6rem 0.2rem 0.2rem;
         position: absolute;
         bottom: 0;
         background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.78));
@@ -156,30 +167,46 @@
         padding-left: 0.4rem;
         background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.6)); }
   .merDetail .pics {
-    top: 1.7rem;
+    top: .8rem;
+    opacity: 1;
     bottom: 1.4rem;
     position: absolute;
     width: 100%; }
-    .merDetail .pics li {
-      position: relative;
-      float: right;
-      width: 95%;
-      height: 100%;
-      overflow: hidden; }
-      .merDetail .pics li > div {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background: #fff;
-        padding: 0.2rem; }
-        .merDetail .pics li > div span {
-          font-size: .3rem; }
-        .merDetail .pics li > div em {
-          color: #ff4200;
-          float: right;
-          font-size: .36rem; }
-        .merDetail .pics li > div p {
-          margin-top: .1rem; }
+    .merDetail .pics.showState {
+      -webkit-transition: all .3s linear;
+      background: rgba(0, 0, 0, 0.75); }
+      .merDetail .pics.showState .pageIndex {
+        opacity: 1;
+        transform: scale(1, 1);
+        -webkit-filter: blur(0px); }
+    .merDetail .pics .pageIndex {
+      -webkit-transition: all .2s linear;
+      opacity: 0;
+      transform: scale(2);
+      -webkit-filter: blur(3px);
+      position: absolute;
+      bottom: 0rem;
+      height: .6rem;
+      line-height: .6rem;
+      color: #fff;
+      text-align: center;
+      left: 0;
+      right: 0; }
+    .merDetail .pics li > div {
+      left: 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: #fff;
+      padding: 0.2rem; }
+      .merDetail .pics li > div span {
+        font-size: .3rem; }
+      .merDetail .pics li > div em {
+        color: #ff4200;
+        float: right;
+        font-size: .36rem; }
+      .merDetail .pics li > div p {
+        margin-top: .1rem; }
   .merDetail .tabFoot {
     font-size: .3rem;
     text-align: center;
@@ -214,5 +241,39 @@
         width: 1.6rem; }
 
 @-webkit-keyframes spot {}
+/*收藏*/
+.collect .lrBox {
+  padding: 0.4rem 0.4rem 0.4rem 0.2rem; }
+  .collect .lrBox img {
+    border-radius: 0;
+    width: 2rem;
+    height: 1.4rem; }
+  .collect .lrBox h2 {
+    font-size: .3rem; }
+  .collect .lrBox p {
+    font-size: .24rem; }
+
+/*个人中心*/
+.userCenter .unameC {
+  height: 2.8rem;
+  position: relative; }
+  .userCenter .unameC .uname {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%); }
+    .userCenter .unameC .uname img {
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%; }
+    .userCenter .unameC .uname p {
+      font-size: .3rem;
+      color: #f33f00;
+      margin-top: .18rem;
+      text-align: center; }
+.userCenter .actions li {
+  padding: 0.28rem 0.2rem;
+  border-bottom: solid 1px #b2b3b9;
+  font-size: .3rem; }
 
 /*# sourceMappingURL=kings.css.map */

@@ -1,5 +1,11 @@
 $(function(){
-	$(document).on('click','.actions li.canClick',function(){
-		$(this).addClass("checked").removeClass('canClick');
-	});
+	var merDetail={
+		slideEnd:function(curIndex){
+			$("#albumIndex").html((curIndex+1)+'/'+this.data.length);
+//			debugger;
+		}
+	}
+	
+	window.slideEnd=merDetail.slideEnd;
+	
 })

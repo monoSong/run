@@ -97,3 +97,9 @@ $browser:null;
     top: 50%;
     -webkit-transform:translateY(-50%) ;
 }
+
+@mixin coverImg(){
+    object-fit: cover; 
+    object-position: center center;
+    height: 100%;
+}

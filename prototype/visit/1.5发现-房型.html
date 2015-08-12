@@ -3,23 +3,25 @@
 	<head>
 		<meta charset="utf-8">
 		<title>发现-民宿简介详情页</title>
-		<script src="static/js/zepto.min.js"></script>
-		<script src="static/js/init.js"></script>
-		<script src="static/js/tab.js"></script>
-		<script src="static/js/business/merDetail.js"></script>
 		<link rel="stylesheet" type="text/css" href="static/css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="static/css/kings.css"/>
+		<script src="static/js/zepto.min.js"></script>
+		<script src="static/js/init.js"></script>
+		<script src="static/js/util.js"></script>
+		<script src="static/js/tab.js"></script>
+		<script src="static/js/islide.js"></script>
+		<script src="static/js/business/roomDetail.js"></script>
 	</head>
 	<body class="merDetail">
 		<div>
 			<header>
 				<div class="iconFont back canClick"></div>
 				莫干山将隐溪山庄
-				<em class="iconFont canClick">
+				<em class="iconFont canClick share">
 					
 				</em>
 			</header>
-			<div class="intro" style="-webkit-filter: blur(2px);">
+			<div id='intro' class="intro">
 				<ul>
 					<li class="first">
 						<img class="coverImg" src="static/img/temp/f4.jpg"/>
@@ -31,16 +33,11 @@
 					</li>
 				</ul>
 			</div>
-			<ul class="pics">
-				<li>
-					<img class="coverImg" src="static/img/temp/r1.jpg"/>
-					<div>
-						<span>温馨双人间</span>
-						<em>￥1080</em>
-						<p>分享我们的旅行，感谢你的陪伴</p>
-					</div>
-				</li>
+			
+			<ul id='pics' class="pics iSlider-wrapper">
+				<p id='pageIndex' class="pageIndex"></p>
 			</ul>
+			
 			<ul class="tab tabFoot foot hBox">
 				<li class="flex1 " linkto='1.3发现-民宿简介详情页.html'>
 					<span class="iconFont"></span>
@@ -57,6 +54,20 @@
 					</div>
 				</li>
 			</ul>
+		</div>
+		<div id='shadowDiv' class="shadowDiv"></div>
+		<div id='shareC' class="shareC">
+			<ul class="hBox">
+				<li class="flex1 canTouch">
+					<img src="static/img/wx.gif" />
+					<p>微信好友</p>
+				</li>
+				<li class="flex1 canTouch">
+					<img src="static/img/pyq.gif" />
+					<p>朋友圈好友</p>
+				</li>
+			</ul>	
+			<div id='closeShare' class="btn canTouch canClick">取消</div>
 		</div>
 	</body>
 </html>
