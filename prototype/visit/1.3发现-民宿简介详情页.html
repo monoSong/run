@@ -5,61 +5,127 @@
 		<title>发现-民宿简介详情页</title>
 		<script src="static/js/zepto.min.js"></script>
 		<script src="static/js/init.js"></script>
+		<script src="static/js/tab.js"></script>
+		<script src="static/js/business/merDetail.js"></script>
 		<link rel="stylesheet" type="text/css" href="static/css/kings.css"/>
 	</head>
-	<body class="findDetail">
+	<body class="merDetail">
 		<div>
 			<header>
 				<div class="iconFont"></div>
-				莫干山（2）
+				莫干山将隐溪山庄
 			</header>
 			<div>
-				<section>
-					<div class="album">
-						<img src="static/img/temp/f1.jpg"/>
-						<p class="fStatus"></p>
+				<div class="album">
+					<img src="static/img/temp/f1.jpg"/>	
+				</div>
+				<div class="bars">
+					<div class="more">
+						<em>50%</em>
+						<div>某某活动限时优惠活动</div>
 					</div>
-					<div class="desc">
-						<h2>莫干山将隐溪山庄</h2>
-						<img class="merIcon" src="static/img/temp/p1.jpg"/>
-						<div class="cites clearfix">
-							<cite>特色早餐</cite>
-							<cite>垂钓</cite>
-							<cite>采摘</cite>
-							<cite>特色早餐</cite>
-							<cite>垂钓</cite>
-							<cite>采摘</cite>
-						</div>
-						<div class="data">
-							<p>25</p>
-							<img src="static/img/temp/p1.jpg"/>
-							<img src="static/img/temp/p1.jpg"/>
-							<img src="static/img/temp/p1.jpg"/>
-						</div>
+					<div class="more">
+						<em>50%</em>
+						<div>某某活动限时优惠活动</div>
 					</div>
-				</section>
-				<section>
-					<div class="album">
-						<img src="static/img/temp/f2.jpg"/>
-						<p class="fStatus focused"></p>
+				</div>
+				<ul class="actions hBox">
+					<li class="flex1 canClick">
+						<span class="iconFont"></span>
+						<p>分享</p>
+					</li>
+					<li class="checked flex1">
+						<span class="iconFont"></span>
+						<p>收藏</p>
+					</li>
+					<li class="flex1 canClick">
+						<span class="iconFont"></span>
+						<p>电话</p>
+					</li>
+					<li class="flex1 canClick">
+						<span class="iconFont"></span>
+						<p>导航</p>
+					</li>
+				</ul>
+				<div class="lrBox clearfix">
+					<div>
+						<img src="static/img/temp/p1.jpg"/>	
 					</div>
-					<div class="desc">
-						<h2>莫干山金松林家园山庄</h2>
-						<img class="merIcon" src="static/img/temp/p2.jpg"/>
-						<div class="cites clearfix">
-							<cite>特色早餐</cite>
-							<cite>垂钓</cite>
-							<cite>采摘</cite>
-						</div>
-						<div class="data">
-							<p>25</p>
-							<img src="static/img/temp/p1.jpg"/>
-							<img src="static/img/temp/p1.jpg"/>
-							<img src="static/img/temp/p1.jpg"/>
-						</div>
-					</div>
-				</section>
+					<article>
+						<h2>掌柜：孙浩</h2>
+						<p>将隐溪山庄，是具有中国乡村风情的农家乐，在莫干山美景的映衬下，干净舒适别有风味</p>
+					</article>
+				</div>
+				<div class="iconData">
+					<p>25</p>
+					<img src="static/img/temp/p1.jpg"/>
+					<img src="static/img/temp/p1.jpg"/>
+					<img src="static/img/temp/p1.jpg"/>
+					<p class="iconFont"></p>
+				</div>
 			</div>
+			<ul class="tab hBox">
+				<li class="flex1 active" target="descC">简介</li>
+				<li class="flex1" target="locateC">位置</li>
+			</ul>
+			<div>
+				<div id="descC" class="tabItem descC">
+					<h2>民宿简介</h2>
+					<p>
+						莫干山坐落在湖州市德清县西部，原属武康县，为天目山的分支，挺拔峻峭，秀丽多姿。莫干山山峦连绵起伏，风景秀丽多姿，景区面积达43平方公里，它虽不及泰岱之雄伟、华山之险峻，却以绿荫如海的修竹、清澈不竭的山泉、星罗棋布的别墅、四季各异的迷人风光称秀于江南，享有“江南第一山”之美誉。
+					</p>
+					<video controls>
+						<source src="static/bbb.mp4">
+					</video>
+				</div>
+				<div id="locateC" class="tabItem locateC" style="display: none;">
+					<div class="contact">
+						<div class="canTouch">
+							<b>地址：</b>
+							德清 筏头乡 前庙村1号
+							<em class="iconFont"></em>
+						</div>
+						<div class="canTouch">
+							<b>电话：</b>
+							0572-93827345
+							<em class="iconFont"></em>
+						</div>
+					</div>
+					<div class="service">
+						<b>服务</b>
+						<ul class="clearfix">
+							<li>免费WIFI</li>
+							<li>免费WIFI</li>
+							<li>免费WIFI</li>
+							<li>免费WIFI</li>
+							<li>免费WIFI</li>
+							<li>免费WIFI</li>
+							<li>免费WIFI</li>
+							<li>免费WIFI</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+				</div>
+			</div>
+			<ul class="tab tabFoot foot hBox">
+				<li class="flex1 active">
+					<span class="iconFont"></span>
+					民宿信息
+				</li>
+				<li class="flex1">
+					<span class="iconFont"></span>
+					房型
+				</li>
+				<li class="flex1">
+					<div class="vipC">
+						<span class="iconFont"></span>
+						VIP卡
+					</div>
+				</li>
+			</ul>
 		</div>
 	</body>
 </html>

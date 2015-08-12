@@ -78,3 +78,8 @@ $browser:null;
     overflow:hidden; 
     text-overflow:ellipsis;
 }
+
+@mixin coverImg(){
+    object-fit: cover; 
+    object-position: center center;
+}

@@ -14,8 +14,9 @@ a{text-decoration:none;}
 cite,i,em,del{font-style:normal;}
 .hide{display:none;} 
 img{display: block;width: 100%;vertical-align: bottom;}
+p{line-height: 1.4;}
 body{
-    color:#333;
+    color:$color_dark;
     font-size: .24em;
     text-align: left;
     /*font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;*/
@@ -66,6 +67,10 @@ table{width:100%}
 
 .clearfix {zoom: 1; } 
 
+.canTouch:active{
+    background: #efefef !important; 
+}
+
 /*更多*/
 .more {
     position: relative;
@@ -78,14 +83,14 @@ table{width:100%}
 }
 .more:after {
     position: absolute;
-    right: .05rem;
+    right: .2rem;
     top: 50%;
     display: block;
     content: '';
     width: .6em;
     height: .6em;
-    border-left: .02rem solid #bdbdbd;
-    border-bottom: .02rem solid #bdbdbd;
+    border-left: .02rem solid #4d4d4d;
+    border-bottom: .02rem solid #4d4d4d;
     @include pre(transform,translateY(-50%) scaleY(0.7) rotateZ(-135deg));
 }
 
@@ -108,6 +113,7 @@ table{width:100%}
 
 .iconFont{
     font-family:FontAwesome ;
+    text-align: center;
 }
 
 header{
@@ -119,9 +125,21 @@ header{
     background:$bg_dark;
     .iconFont{
         position:absolute;
-        font-size: .6rem; 
-        left: .18rem; 
+        left: $padding; 
     }
+    .back{
+        font-size: .6rem; 
+    }
+    em.iconFont{right:$padding;left: auto;}
+}
+
+.foot{
+    @include flexBox();
+    position: fixed;
+    box-shadow: 0 0 10px #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 footer{
@@ -191,4 +209,119 @@ footer{
         text-align: center;
         margin-bottom: .1rem;
     }
+}
+@mixin coverImg(){
+    object-fit: cover; 
+    object-position: center center;
+}
+
+.coverImg{
+    @include coverImg();
+}
+
+.album{
+    overflow: hidden;
+}
+.bars{
+    >div{
+        padding: .46rem $padding;
+        font-size: .3rem;
+        @include splitLine(#b2b3b9);
+        em{
+            color: $color_hl;
+            font-size: .34rem;
+            float:right;
+            padding-right: $padding;
+        }
+        &.more{
+            padding-right: 2*$padding;
+        }
+        &:last-child{
+            border:none;
+            padding-bottom: .56rem;
+            background: url(../img/lineShadow.png) left bottom no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.lrBox{
+    position: relative;
+    @include splitLine(#b2b3b9);
+    >div{
+        float: left;
+//      position: absolute;
+//      left: 0;
+//      top: 0; 
+        img{
+            margin-left: .36rem;
+            border-radius: 50%;
+            width: 1.5rem;
+            height: 1.5rem;
+        }       
+    }
+    >article{
+        margin-left: 2.16rem;
+        h2{
+            font-size: .28rem;
+            color: #333;
+        };
+    }
+}
+
+.iconData{
+    margin-bottom: .3rem;
+    p,img{
+        width: .9rem;
+        height: .9rem;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: .3rem;
+        margin-bottom: .1rem;
+    }
+    p{
+        border: solid 1px #b6b6b6;
+        line-height: .9rem;
+        text-align: center;
+        font-size: .3rem;
+        color: #333;
+    }
+}
+
+.tab{
+    border:solid 1px #b2b3b9;
+    border-left:none;
+    border-right:none; 
+    li{
+       font-size: .3rem;
+       height: .54rem;
+       line-height: .54rem;
+       color:#666;
+       text-align: center;
+       position: relative;
+       border-right: solid 1px #b2b3b9;
+       -webkit-transition:all .3s linear; 
+       &:last-child{
+           border: none;
+       }
+       &.active{
+           color: #212121;
+           &:after{
+                content:"";
+                height: .02rem;
+                position: absolute;
+                left: 0;
+                right: 0;
+                background: #222325;
+                bottom: 0;
+           }
+       } 
+    }
+}
+.tabItem{
+    padding: $padding;
+}
+
+video{
+    width: 100%;
 }
