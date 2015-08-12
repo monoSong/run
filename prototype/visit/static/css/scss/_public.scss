@@ -4,7 +4,7 @@ $padding:.2rem;
 $bg_dark:#222325;/*深背景色*/
 $bg_hl:#ff4e00;/*高亮背景色*/
 $color_hl:#ff4e00; /*高亮色*/
-$color_dark:#222325; /*深字体色*/
+$color_dark:#222325; /*深字体色*/ 
 
 *{outline: none !important;}
 html{@include pre('text-size-adjust','100%');  min-width: 320px;height: 100%;}

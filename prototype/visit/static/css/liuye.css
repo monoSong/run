@@ -35,8 +35,11 @@ img {
   width: 100%;
   vertical-align: bottom; }
 
+p {
+  line-height: 1.4; }
+
 body {
-  color: #333;
+  color: #222325;
   font-size: .24em;
   text-align: left;
   /*font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;*/
@@ -141,6 +144,9 @@ table {
 .clearfix {
   zoom: 1; }
 
+.canTouch:active {
+  background: #efefef !important; }
+
 /*更多*/
 .more {
   position: relative;
@@ -152,14 +158,14 @@ table {
 
 .more:after {
   position: absolute;
-  right: .05rem;
+  right: .2rem;
   top: 50%;
   display: block;
   content: '';
   width: .6em;
   height: .6em;
-  border-left: .02rem solid #bdbdbd;
-  border-bottom: .02rem solid #bdbdbd;
+  border-left: .02rem solid #4d4d4d;
+  border-bottom: .02rem solid #4d4d4d;
   -webkit-transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg); }
 
 .more-up:after {
@@ -175,7 +181,8 @@ table {
   font-weight: normal;
   font-style: normal; }
 .iconFont {
-  font-family: FontAwesome; }
+  font-family: FontAwesome;
+  text-align: center; }
 
 header {
   height: .84rem;
@@ -186,8 +193,20 @@ header {
   background: #222325; }
   header .iconFont {
     position: absolute;
-    font-size: .6rem;
-    left: .18rem; }
+    left: 0.2rem; }
+  header .back {
+    font-size: .6rem; }
+  header em.iconFont {
+    right: 0.2rem;
+    left: auto; }
+
+.foot {
+  display: -webkit-box;
+  position: fixed;
+  box-shadow: 0 0 10px #fff;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 footer {
   display: -webkit-box;
@@ -253,6 +272,94 @@ footer {
     min-width: 1.62rem;
     text-align: center;
     margin-bottom: .1rem; }
+
+.coverImg {
+  object-fit: cover;
+  object-position: center center; }
+
+.album {
+  overflow: hidden; }
+
+.bars > div {
+  padding: 0.46rem 0.2rem;
+  font-size: .3rem;
+  border-bottom: solid 1px #b2b3b9; }
+  .bars > div em {
+    color: #ff4e00;
+    font-size: .34rem;
+    float: right;
+    padding-right: 0.2rem; }
+  .bars > div.more {
+    padding-right: 0.4rem; }
+  .bars > div:last-child {
+    border: none;
+    padding-bottom: .56rem;
+    background: url(../img/lineShadow.png) left bottom no-repeat;
+    background-size: contain; }
+
+.lrBox {
+  position: relative;
+  border-bottom: solid 1px #b2b3b9; }
+  .lrBox > div {
+    float: left; }
+    .lrBox > div img {
+      margin-left: .36rem;
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem; }
+  .lrBox > article {
+    margin-left: 2.16rem; }
+    .lrBox > article h2 {
+      font-size: .28rem;
+      color: #333; }
+
+.iconData {
+  margin-bottom: .3rem; }
+  .iconData p, .iconData img {
+    width: .9rem;
+    height: .9rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: .3rem;
+    margin-bottom: .1rem; }
+  .iconData p {
+    border: solid 1px #b6b6b6;
+    line-height: .9rem;
+    text-align: center;
+    font-size: .3rem;
+    color: #333; }
+
+.tab {
+  border: solid 1px #b2b3b9;
+  border-left: none;
+  border-right: none; }
+  .tab li {
+    font-size: .3rem;
+    height: .54rem;
+    line-height: .54rem;
+    color: #666;
+    text-align: center;
+    position: relative;
+    border-right: solid 1px #b2b3b9;
+    -webkit-transition: all .3s linear; }
+    .tab li:last-child {
+      border: none; }
+    .tab li.active {
+      color: #212121; }
+      .tab li.active:after {
+        content: "";
+        height: .02rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: #222325;
+        bottom: 0; }
+
+.tabItem {
+  padding: 0.2rem; }
+
+video {
+  width: 100%; }
 
 .icon-search, .icon-close {
   font-family: FontAwesome;
