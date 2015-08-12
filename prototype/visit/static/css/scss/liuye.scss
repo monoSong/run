@@ -1,13 +1,12 @@
 @charset "utf-8";
+@import 'var.scss';
 @import 'macro.scss';
-@import 'public.scss';
 
 
 .icon-search , .icon-close{
-		font-family: FontAwesome;
-		font-size: .28rem;
-	
-	}
+	font-family: FontAwesome;
+	font-size: .28rem;
+}
 
 
 /*2.1*/

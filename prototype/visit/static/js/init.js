@@ -4,9 +4,16 @@
 	document.documentElement.style.fontSize = "50px";
 }())
 
+
 $(document).on('click','.canClick',function(){
 	$('.clicked').removeClass('clicked');
 	$(this).addClass('clicked');
+}).on('click','[linkto]',function(){
+	window.location=$(this).attr('linkTo');
+}).on('click','.back',function(){
+	setTimeout(function(){
+		window.history.back();
+	},500);
 })
 
 	

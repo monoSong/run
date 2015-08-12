@@ -1,6 +1,6 @@
 @charset "utf-8";
+@import 'var.scss';
 @import 'macro.scss';
-@import 'public.scss';
 
 /*发现首页*/
 .findIndex{
@@ -63,6 +63,11 @@
             }
         }
     }
+}
+
+@mixin coverImg(){
+    object-fit: cover; 
+    object-position: center center;
 }
 
 /*发现-民宿简介详情页*/

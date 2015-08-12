@@ -2,12 +2,41 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>发现首页</title>
+		<title>列表页</title>
 		<script src="static/js/zepto.min.js"></script>
 		<script src="static/js/init.js"></script>
-		<link rel="stylesheet" type="text/css" href="static/css/kings.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/public.css"/>
+		<style type="text/css">
+			body{
+				background: #EFEFEF;
+				font-size: .3rem;
+				text-shadow: 1px 1px 1px #ccc;
+			}
+			li{
+				border-bottom: solid 1px #ccc;
+				padding:0 .2rem;
+				height: 1rem;
+				line-height: 1rem;
+				counter-increment: index;
+				background: #fff;
+			}
+			li:before{
+				content:counter(index)'、';
+				color:blue;
+				margin-right: .2rem;
+				
+			}
+		</style>
 	</head>
 	<body class="index">
-		<footer class="iconFont"></footer>
+		<ul>
+			<li class="more" linkTo='1.1发现首页.html'>1.1发现首页</li>
+			<li class="more" linkTo='1.2发现-详情.html'>1.2发现-详情</li>
+			<li class="more" linkTo='1.3发现-民宿简介详情页.html'>1.3发现-民宿简介详情页</li>
+			<li class="more" linkTo='1.5发现-房型.html'>1.5发现-房型</li>
+			<li class="more" linkTo='2.1搜索-首页.html'>2.1搜索-首页</li>
+			<li class="more" linkTo='2.2搜索-目的地.html'>2.2搜索-目的地</li>
+			<li class="more" linkTo='2.3搜索-条件.html'>2.3搜索-条件</li>
+		</ul>
 	</body>
 </html>
