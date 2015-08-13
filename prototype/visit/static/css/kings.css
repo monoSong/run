@@ -240,7 +240,6 @@
         line-height: .6rem;
         width: 1.6rem; }
 
-@-webkit-keyframes spot {}
 /*收藏*/
 .collect .lrBox {
   padding: 0.4rem 0.4rem 0.4rem 0.2rem; }
@@ -271,9 +270,184 @@
       color: #f33f00;
       margin-top: .18rem;
       text-align: center; }
-.userCenter .actions li {
-  padding: 0.28rem 0.2rem;
-  border-bottom: solid 1px #b2b3b9;
-  font-size: .3rem; }
+
+/*我的通知*/
+.notify .listItem {
+  color: #ff4200; }
+  .notify .listItem .more:after {
+    border-color: #ff4200; }
+
+/*设置*/
+.setting .logout {
+  margin: 1.8rem .3rem 0 .3rem;
+  border: solid 1px #e03a01;
+  background: #fc8510;
+  color: #fff;
+  font-size: .42rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  border-radius: .06rem; }
+
+/*常见问题*/
+.questions a {
+  color: #fc730e;
+  font-size: .3rem;
+  padding-left: .04rem; }
+
+.loginPage .shadowDiv {
+  background: rgba(0, 0, 0, 0.44);
+  display: block; }
+.loginPage .bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+  .loginPage .bg img {
+    -webkit-filter: blur(5px);
+    object-fit: cover;
+    object-position: center center;
+    height: 100%; }
+.loginPage .loginPane {
+  z-index: 200;
+  position: absolute;
+  top: 1.46rem;
+  left: 0.2rem;
+  right: 0.2rem;
+  transition: all .3 linear; }
+  .loginPage .loginPane li {
+    margin-top: .4rem; }
+.loginPage .wxPane {
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: .1rem;
+  padding: 0.4rem 0.2rem;
+  z-index: 200;
+  position: absolute;
+  top: 1.46rem;
+  left: 0.2rem;
+  right: 0.2rem;
+  color: #ededed; }
+  .loginPage .wxPane.fr {
+    display: block;
+    -webkit-animation: fr 1s ease-in-out; }
+  .loginPage .wxPane img {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: .1rem;
+    margin: 0 auto; }
+  .loginPage .wxPane h2 {
+    font-size: .34rem;
+    margin: .18rem 0 .4rem 0; }
+  .loginPage .wxPane p {
+    font-size: .28rem;
+    line-height: .6rem; }
+.loginPage .infos {
+  background: #fff;
+  border-radius: .1rem;
+  padding: 0.4rem 0.2rem; }
+.loginPage .txtC {
+  background: #fff;
+  border-radius: .1;
+  position: relative;
+  margin-bottom: .42rem;
+  height: .86rem; }
+  .loginPage .txtC:before {
+    position: absolute;
+    z-index: 10;
+    left: .3rem;
+    height: 100%;
+    line-height: .86rem;
+    color: #807f7f;
+    font-size: .3rem; }
+  .loginPage .txtC.telC:before {
+    content: "手机号："; }
+  .loginPage .txtC.vcodeC:before {
+    content: "验证码："; }
+  .loginPage .txtC.wxNoC:before {
+    content: "微信号："; }
+  .loginPage .txtC input {
+    position: absolute;
+    border: solid 1px #EFEFEF;
+    left: 0;
+    width: 100%;
+    height: .86rem;
+    padding-left: 1.62rem; }
+    .loginPage .txtC input.active {
+      -webkit-animation: focus 300ms linear forwards; }
+  .loginPage .txtC .btn {
+    font-size: .24rem;
+    height: .56rem;
+    line-height: .56rem;
+    position: absolute;
+    right: .12rem;
+    top: .14rem;
+    padding: 0 .3rem;
+    text-align: center;
+    border-radius: 0.06rem;
+    background: #22e1e0;
+    color: #fff; }
+    .loginPage .txtC .btn.disabled {
+      background: #909696; }
+  .loginPage .txtC .restSecC {
+    display: none;
+    font-size: .24rem;
+    color: #333;
+    position: absolute;
+    bottom: -.5rem;
+    right: .36rem; }
+  .loginPage .txtC #restSec {
+    color: #22e1e0;
+    margin-right: .02rem; }
+  .loginPage .txtC.active {
+    -webkit-animation: focus 300ms linear forwards; }
+.loginPage .btnLogin {
+  margin-top: .8rem;
+  background: #333333;
+  border: solid 1px #212121;
+  box-shadow: 0 0 1px #707060 inset;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  color: #f1f1f1;
+  font-size: .42rem;
+  border-radius: .1rem; }
+.loginPage .wx {
+  margin-top: 1rem;
+  text-align: center; }
+  .loginPage .wx .canClick {
+    width: 1.2rem;
+    margin: 0 auto; }
+  .loginPage .wx img {
+    height: 1.2rem;
+    margin: 0 auto; }
+  .loginPage .wx p {
+    margin-top: .18rem;
+    font-size: .24rem;
+    color: #ffffff; }
+
+@-webkit-keyframes focus {
+  1% {
+    box-shadow: 0 0 15px 3px #22e1e0; }
+  35% {
+    box-shadow: 0 0 14px 2px #22e1e0; }
+  90% {
+    box-shadow: 0 0 10px 1px #22e1e0; }
+  100% {
+    box-shadow: 0 0 3px 1px #22e1e0 inset ,0 0 10px #22E1E0;
+    border: solid 1px #0081ff; } }
+@-webkit-keyframes fr {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
 
 /*# sourceMappingURL=kings.css.map */

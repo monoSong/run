@@ -98,6 +98,12 @@ $browser:null;
     -webkit-transform:translateY(-50%) ;
 }
 
+@mixin inlineCenter($h){
+    height: $h;
+    line-height: $h;
+    text-align: center;
+}
+
 @mixin coverImg(){
     object-fit: cover; 
     object-position: center center;

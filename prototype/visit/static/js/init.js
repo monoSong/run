@@ -56,6 +56,4 @@ $(document).on('click', '.canClick', function() {
 	}
 }).on('click', '.share', function() {
 	util.showSharePane();
-}).on('click','#closeShare',function(){
-	util.hideSharePane();
-});
+})

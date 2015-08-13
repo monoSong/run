@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登陆</title>
+		<link rel="stylesheet" type="text/css" href="static/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/kings.css"/>
+		<script src="static/js/zepto.min.js"></script>
+		<script src="static/js/init.js"></script>
+		<script src="static/js/business/login.js"></script>
+	</head>
+	<body class="loginPage">
+		<div class="shadowDiv"></div>
+		<div class="bg">
+			<img src="static/img/bg_login.jpg" class="bg" />
+		</div>
+		<div class="panes">
+			<div id='loginPane' class="loginPane">
+				<div class="infos">
+					<div class="txtC telC">
+						<input class="txt" id="hello" type="tel" maxlength="11">
+					</div>
+					<div class="txtC vcodeC">
+						<input class="txt" type="tel" maxlength="6">
+						<div id="btnGetVcode" class="btn canClick">获取验证码</div>
+						<p id="restSecC" class="restSecC"><span id="restSec"></span>后可重新获取</p>
+					</div>
+				</div>
+				<div class="btnLogin canClick">登录</div>
+				<div class="wx">
+					<div id='btnChooseWX' class="canClick">
+						<img src="static/img/wx.png"/>
+						<p>微信登录</p>
+					</div>
+				</div>
+			</div>
+			<div id='wxPane' class="wxPane">
+				<img src="static/img/temp/p2.jpg"/>
+				<h2>微信安全登录</h2>
+				<p>
+					登录后该应用将获得以下权限：<br/>
+					<label><input type="checkbox">获得你的公开信息、头像等</label>
+				</p>
+				<div class="btnLogin canClick">登录</div>
+			</div>	
+		</div>	
+	</body>
+</html>

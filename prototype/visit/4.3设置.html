@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>设置</title>
+		<link rel="stylesheet" type="text/css" href="static/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/kings.css"/>
+		<script src="static/js/zepto.min.js"></script>
+		<script src="static/js/init.js"></script>
+		<script src="static/js/util.js"></script>
+	</head>
+	<body class="setting">
+		<div>
+			<header>
+				<div class="back iconFont canClick"></div>
+				设置
+			</header>
+			<div>
+				<ul class="listItem">
+					<li class="more" onePageTo='4.3设置-通知.html'>
+						通知设置
+					</li>
+					<li class="more">
+						去App Store为我们评分
+					</li>
+					<li class="more" onePageTo='4.3设置-关于我们.html'>
+						关于我们
+					</li>
+					<li class="more share">
+						告诉朋友
+					</li>
+					<li class="more" onePageTo='4.3设置-常见问题.html'>
+						常见问题
+					</li>
+					<li class="more" id='btnTel'>
+						客服电话
+					</li>
+				</ul>
+			</div>
+			<div class="logout canClick">退出登录</div>
+		</div>
+		<script type="text/javascript">
+			$("#btnTel").click(function(){
+				util.showTelPane();
+			});
+		</script>
+	</body>
+</html>

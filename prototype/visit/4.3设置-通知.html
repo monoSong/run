@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>通知设置</title>
+		<link rel="stylesheet" type="text/css" href="static/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/kings.css"/>
+		<script src="static/js/zepto.min.js"></script>
+		<script src="static/js/init.js"></script>
+	</head>
+	<body class="setting">
+		<div>
+			<header>
+				<div class="back iconFont canClick"></div>
+				通知设置
+			</header>
+			<div>
+				<ul class="listItem">
+					<li>
+						提醒
+						<em class="switch"></em>
+					</li>
+					<li>
+						通知
+						<em class="switch on"></em>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$('.switch').click(function(){
+				$(this).toggleClass('on');
+			})
+		</script>
+	</body>
+</html>
