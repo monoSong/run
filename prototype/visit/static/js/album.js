@@ -21,7 +21,6 @@ $(function(){
 			
 			if(opts.onslideend){
 				opts.onslideend = window[opts.onslideend];
-//				debugger;
 			}
 			
 			var	islider = new iSlider(opts);
