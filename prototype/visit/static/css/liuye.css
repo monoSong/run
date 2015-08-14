@@ -136,7 +136,8 @@
 
 /*2.3*/
 .filter-search {
-  margin: .2rem .1rem; }
+  margin: .2rem .1rem;
+  position: relative; }
   .filter-search .s {
     position: relative; }
     .filter-search .s .icon-search {
@@ -190,7 +191,7 @@
   .filter-search .tab-content {
     position: absolute;
     z-index: 99;
-    width: 97%;
+    width: 100%;
     border: .02rem solid #b2b3b9;
     border-width: 0 .02rem .02rem; }
     .filter-search .tab-content .tabItem {
@@ -300,8 +301,8 @@
   display: block;
   content: "";
   top: -50%;
-  left: -200%;
-  width: 300%;
+  left: -50%;
+  width: 200%;
   height: 200%;
   background: transparent; }
 
@@ -316,8 +317,8 @@
   display: block;
   content: "";
   top: -50%;
-  left: 0;
-  width: 300%;
+  left: -50%;
+  width: 200%;
   height: 200%;
   background: transparent; }
 

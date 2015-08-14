@@ -198,7 +198,7 @@
 /*2.3*/
 .filter-search {
 	margin:.2rem .1rem;
-
+	position: relative;
 	.s {
 		position:relative;
 
@@ -267,7 +267,7 @@
 	.tab-content {
 		position:absolute;
 		z-index:99;
-		width:97%;
+		width:100%;
 		border : .02rem solid #b2b3b9;
 		border-width: 0 .02rem .02rem;
 
@@ -394,8 +394,10 @@
         }
             .irs-slider.from:before {
                 position: absolute; display: block; content: "";
-                top: -50%; left: -200%;
-                width: 300%; height: 200%;
+                top: -50%; 
+                left: -50%;
+                width: 200%; 
+                height: 200%;
                 background: rgba(0,0,0,0.0);
             }
         .irs-slider.to {
@@ -408,8 +410,10 @@
                 position: absolute; 
                 display: block; 
                 content: "";
-                top: -50%; left: 0;
-                width: 300%; height: 200%;
+                top: -50%; 
+                left: -50%;
+                width: 200%; 
+                height: 200%;
                 background: rgba(0,0,0,0.0);
             }
         .irs-slider.last {

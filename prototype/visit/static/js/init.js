@@ -22,38 +22,32 @@ $(document).on('click', '.canClick', function() {
 			pageBox = pWin.pageBox,
 			curIndex = pageBox.slideIndex,
 			toIndex = curIndex + 1;
-		$('#i' + toIndex, pDoc).attr('src',toUrl );//页面转入
-		pageBox.slideTo(toIndex);	
-		pWin.pageUrls.push($('#i' + curIndex, pDoc).attr('src'));//路径保存
-		setTimeout(function() {
-			$('#i' + curIndex, pDoc).attr('src', '');//释放
-		}, 2000);
+		pWin.history.pushState(null, "", toUrl);
+		pWin.pageUrls.push($('#i' + curIndex, pDoc).attr('src'));//路径保存	
+		pWin.showIframe(toIndex,curIndex,toUrl);	
 	}else{
 		window.location = toUrl;
 	}
-
 }).on('click', '.back', function() {
-	if (window.top != window) { //单页
-		setTimeout(function() {
-			var pWin = window.top,
-				pDoc = pWin.document,
-				pageBox = pWin.pageBox,
-				curIndex = pageBox.slideIndex,
-				toIndex = curIndex - 1,
-				toUrl = $(this).attr('onePageTo');
-			if (toIndex >= 0) {
-				$('#i' + toIndex, pDoc).attr('src', pWin.pageUrls.pop());
-				setTimeout(function() {
-					$('#i' + curIndex, pDoc).attr('src', '');
-				}, 2000);
-				pageBox.slideTo(toIndex);
+	var $t = $(this);
+	setTimeout(function() {
+		if (window.top != window) { //单页
+			if(navigator.app && navigator.app.backHistory){//phonegap
+				window.top.navigator.app.backHistory();
+			}else{
+				window.top.history.back();
 			}
-		}, 500);
-	} else {
-		setTimeout(function() {
-			window.history.back();
-		}, 500);
-	}
+		} else {
+			if(navigator.app && navigator.app.backHistory){//phonegap
+console.log('     world.  phonegap ');				
+				navigator.app.backHistory();
+			}else{
+console.log('hello ');				
+				history.back();
+			}
+			$t.removeClass('clicked');
+		}
+	}, 500);
 }).on('click', '.share', function() {
 	util.showSharePane();
 })

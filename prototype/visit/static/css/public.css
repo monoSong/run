@@ -493,7 +493,8 @@ iframe {
     padding: 0;
     height: 1rem;
     line-height: 1rem;
-    text-align: center; }
+    text-align: center;
+    color: #009036; }
   .telC .iconFont {
     font-size: .6rem;
     margin-right: .1rem;

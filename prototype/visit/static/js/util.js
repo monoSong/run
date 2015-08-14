@@ -31,11 +31,13 @@ var util = {
 		this.showShadowDiv();
 		if($("#telC").length==0){
 			var shareHTML = '<div id="telC" class="paneC telC">\
+								<a href="tel:400811888888">\
 								<ul class="hBox">\
 									<li class="flex1 canTouch">\
 										<span class="iconFont"></span>400-811-888888\
 									</li>\
 								</ul>\
+								</a>\
 								<div onclick="util.hidePane(this)" class="btn canTouch canClick">取消</div>\
 							</div>'
 			$(shareHTML).appendTo("body");

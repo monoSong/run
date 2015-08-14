@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>发现详情</title>
+		<!--<link rel="stylesheet" type="text/css" href="static/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/kings.css"/>-->
+		<link rel="stylesheet" type="text/css" href="static/css/all.css"/>
 		<script src="static/js/zepto.min.js"></script>
 		<script src="static/js/init.js"></script>
-		<link rel="stylesheet" type="text/css" href="static/css/public.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/kings.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/liuye.css"/>
 		<script src="static/js/tab.js"></script>
 		<script src="static/js/islide.js"></script>
 		<script src="static/js/album.js"></script>
@@ -55,10 +55,10 @@
 						<div id='location' class="tabItem" style="display:none;">
 							<h4>按行政区选择</h4>
 							<ul>
-								<li><input type="checkbox">不限</li>
-								<li><input type="checkbox">德清县</li>
-								<li><input type="checkbox">平谷县</li>
-								<li><input type="checkbox">延庆县</li>
+								<label><li><input type="checkbox">不限</li></label>
+								<label><li><input type="checkbox">德清县</li></label>
+								<label><li><input type="checkbox">平谷县</li></label>
+								<label><li><input type="checkbox">延庆县</li></label>
 							</ul>
 						</div>
 						<div id='feature' class="tabItem" style="display:none;">
@@ -132,8 +132,8 @@
 		$("#range_1").ionRangeSlider({
 			min: 0,
 			max: 3000,
-			from:1000,
-			to: 4000,
+			from:100,
+			to: 500,
 			type: 'double',//设置类型
 			step: 1,
 			prefix: "",//设置数值前缀
