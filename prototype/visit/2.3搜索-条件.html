@@ -9,6 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="static/css/kings.css"/>
 		<link rel="stylesheet" type="text/css" href="static/css/liuye.css"/>
 		<script src="static/js/tab.js"></script>
+		<script src="static/js/islide.js"></script>
+		<script src="static/js/album.js"></script>
+		<script src="static/js/business/merList.js"></script>
 	</head>
 	<body class="findDetail">
 		<div>
@@ -41,7 +44,8 @@
 						</div>
 						<div id='price' class="tabItem" style="display:none;">
 							<div class="item-price">
-								<div class="progress-bar">
+								<div class='progress-bar'>
+									<input type="text" id="range_1" />
 								</div>
 								<div class='btn'>
 									<button >确定</button>
@@ -72,8 +76,9 @@
 				</div>
 
 				<section>
-					<div class="album" linkTo='1.3发现-民宿简介详情页.html'>
-						<img src="static/img/temp/f1.jpg"/>
+					<div class="album" linkTo='1.3发现-民宿简介详情页.html'
+						data-imgs="static/img/temp/f1.jpg,static/img/temp/f2.jpg,static/img/temp/f3.jpg"
+					>
 						<p class="fStatus"></p>
 					</div>
 					<div class="desc">
@@ -96,8 +101,10 @@
 					</div>
 				</section>
 				<section>
-					<div class="album" linkTo='1.3发现-民宿简介详情页.html'>
-						<img src="static/img/temp/f2.jpg"/>
+					<div class="album" linkTo='1.3发现-民宿简介详情页.html'
+						data-configs='"isAutoplay":true'
+						data-imgs="static/img/temp/f1.jpg,static/img/temp/f2.jpg,static/img/temp/f3.jpg"
+					>
 						<p class="fStatus focused"></p>
 					</div>
 					<div class="desc">
@@ -118,5 +125,23 @@
 				</section>
 			</div>
 		</div>
+	<script src="static/js/jquery-1.11.0.min.js"></script> 
+	<script src="static/js/ion.rangeSlider.js"></script> 
+	<script>
+	$(document).ready(function(){
+		$("#range_1").ionRangeSlider({
+			min: 0,
+			max: 3000,
+			from:1000,
+			to: 4000,
+			type: 'double',//设置类型
+			step: 1,
+			prefix: "",//设置数值前缀
+			postfix: "",//设置数值后缀
+			prettify: false,
+			hasGrid: false
+		});
+	});
+	</script>
 	</body>
 </html>

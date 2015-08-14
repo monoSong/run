@@ -37,13 +37,19 @@
 						<p>价格区间:</p>
 
 						<div class='progress-bar'>
-
+							<input type="text" id="range_1" />
 						</div>
 					</div>
 
 					<div class='submit'>
 						<button linkto='2.2搜索-目的地.html' value="" class="canClick">搜索</button>
 					</div>
+					</br>
+					</br>
+					</br>
+					</br>
+					</br>
+					</br>
 				</form>
 			</div>
 			<footer>
@@ -53,5 +59,25 @@
 				<div><span class="canClick"></span></div>
 			</footer>
 		</div>
-	</body>
+
+
+<script src="static/js/jquery-1.11.0.min.js"></script> 
+<script src="static/js/ion.rangeSlider.js"></script> 
+<script>
+$(document).ready(function(){
+	$("#range_1").ionRangeSlider({
+		min: 0,
+		max: 3000,
+		from:1000,
+		to: 4000,
+		type: 'double',//设置类型
+		step: 1,
+		prefix: "",//设置数值前缀
+		postfix: "",//设置数值后缀
+		prettify: false,
+		hasGrid: true
+	});
+});
+</script>
+</body>
 </html>
