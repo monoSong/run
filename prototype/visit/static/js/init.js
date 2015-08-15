@@ -39,10 +39,8 @@ $(document).on('click', '.canClick', function() {
 			}
 		} else {
 			if(navigator.app && navigator.app.backHistory){//phonegap
-console.log('     world.  phonegap ');				
 				navigator.app.backHistory();
 			}else{
-console.log('hello ');				
 				history.back();
 			}
 			$t.removeClass('clicked');

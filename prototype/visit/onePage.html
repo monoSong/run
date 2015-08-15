@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8">
 		<title>单页</title>
-		<link rel="stylesheet" type="text/css" href="static/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/public.css" />
 		<script src="static/js/zepto.min.js"></script>
 		<script src="static/js/init.js"></script>
 		<script src="static/js/islide.js"></script>
 		<script src="static/js/util.js"></script>
 		<script type="text/javascript">
-			var timer={
-					0:'',
-					1:'',
-					2:''
+			var timer = {
+					0: '',
+					1: '',
+					2: ''
 				},
 				pageBox;
-			function showIframe(toIndex,curIndex,toUrl){
+
+			function showIframe(toIndex, curIndex, toUrl) {
+				toIndex = (3 + toIndex) % 3;
 				var $targetFrame = $('#i' + toIndex);
-				if($targetFrame.attr('src')!=toUrl){
-					$targetFrame.attr('src',toUrl);
+				if ($targetFrame.attr('src') != toUrl) {
+					$targetFrame.attr('src', toUrl);
+				}
+				if (window.timer[toIndex]) {
+					clearTimeout(window.timer[toIndex]);
+				}
+				$targetFrame.show();
+				var tt = setInterval(function(){
+					if(document.getElementById('i'+toIndex).getAttribute('src')==''){
+						document.getElementById('i'+toIndex).setAttribute('src',toUrl);
+
+					}else{
+						clearInterval(tt);
 					}
-					if(window.timer[toIndex]){
-						clearTimeout(window.timer[toIndex]);
-					}
-					$targetFrame.show();
-					pageBox.slideTo(toIndex);
-					window.timer[curIndex] = setTimeout(function() {
-console.log(curIndex,111111);						
-						$('#i' + curIndex).hide();
-					timer[curIndex]='';
+				},1000);
+				pageBox.slideTo(toIndex);
+				
+				window.timer[curIndex] = setTimeout(function() {
+					$('#i' + curIndex).hide();
+					timer[curIndex] = '';
 				}, 2000);
 			}
-			$(window).bind('popstate',function(){
+			$(window).bind('popstate', function() {
 				var curIndex = pageBox.slideIndex,
 					toIndex = curIndex - 1;
-				if (toIndex >= 0) {
-					showIframe(toIndex,curIndex,pageUrls.pop());
-				}
+				showIframe(toIndex, curIndex, pageUrls.pop());
 			});
-			$(function(){
+			$(function() {
 				var url1 = util.getUrlKV('firstPage')
-				if(url1){
+				if (url1) {
 					var data = [{
-						content: '<iframe id="i0" src="'+url1+'"></iframe>',
+						content: '<iframe id="i0" src="' + url1 + '"></iframe>',
 					}, {
 						content: '<iframe id="i1" src=""></iframe>',
 					}, {
@@ -53,17 +62,19 @@ console.log(curIndex,111111);
 						data: data,
 						dom: document.getElementById("iSlider-wrapper"),
 						isLooping: true,
-						animateType:'rotate',
+						animateType: 'rotate',
 						forbidEvt: true
 					};
 					pageBox = new iSlider(opts);
-					window.pageUrls=[];
+					window.pageUrls = [];
 				}
 			})
 		</script>
 	</head>
-	<body class="onePage noHF" >
+
+	<body class="onePage noHF">
 		<div id="iSlider-wrapper" class="iSlider-wrapper">
 		</div>
 	</body>
+
 </html>
