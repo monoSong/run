@@ -73,6 +73,12 @@ body {
   -webkit-touch-callout: none;
   -webkit-text-size-adjust: none; }
 
+.ui-mobile-viewport .ui-mobile [data-role=page], .ui-mobile-viewport .ui-mobile [data-role=dialog], .ui-mobile-viewport .ui-page {
+  top: .84rem; }
+
+.ui-mobile-viewport.noHF .ui-mobile [data-role=page], .ui-mobile-viewport.noHF .ui-mobile [data-role=dialog], .ui-mobile-viewport.noHF .ui-page, .ui-mobile-viewport.noH .ui-mobile [data-role=page], .ui-mobile-viewport.noH .ui-mobile [data-role=dialog], .ui-mobile-viewport.noH .ui-page {
+  top: 0; }
+
 table {
   width: 100%; }
 
